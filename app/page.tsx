@@ -26,12 +26,12 @@ export default function Home() {
         Welcome to DMS
       </h1>
 
-      <button
-  onClick={() => alert("Button clicked")}
-  className="bg-brand-secondary text-brand-white px-4 py-2 rounded hover:bg-brand-tertiary"
->
-  Click Me
-</button>
+      {/* <button
+        onClick={() => alert("Button clicked")}
+        className="bg-brand-secondary text-brand-white px-4 py-2 rounded hover:bg-brand-tertiary"
+      >
+        Click Me
+      </button> */}
 
       <span className="text-brand-highlight">
         Highlight Text

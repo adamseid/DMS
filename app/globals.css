@@ -1,5 +1,7 @@
 @config "../tailwind.config.ts";
 @import "tailwindcss";
+@import "../styles/components.css";
+
 
 
 /* Segoe UI Regular */
@@ -57,5 +59,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "SegoeUI", Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0px;
 }

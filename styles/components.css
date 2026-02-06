@@ -1,0 +1,7 @@
+/* styles/component.css */
+
+.fancy-border {
+  border-bottom: 1px solid;
+  border-image-source: radial-gradient(53.51% 544.87% at 50% 100%, #9747FF 0%, #101010 100%);
+  border-image-slice: 1; /* necessary for the gradient to display across the border */
+}
