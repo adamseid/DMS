@@ -52,13 +52,14 @@ export function Carousel({ items = [] }: CarouselProps) {
           )}
 
           {/* Bullets */}
-          {current.bullets?.length > 0 && (
+          {(current.bullets ?? []).length > 0 && (
             <ul className="pl-5 space-y-3 text-white list-disc">
-              {current.bullets.map((item, i) => (
+              {(current.bullets ?? []).map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
             </ul>
           )}
+
         </div>
 
         {/* RIGHT SIDE IMAGE */}
