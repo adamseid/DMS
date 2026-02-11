@@ -1,6 +1,18 @@
 import { useState } from "react";
 
-export function Carousel({ items = [] }) {
+type CarouselItem = {
+  logo?: string;
+  title?: string;
+  description?: string;
+  bullets?: string[];
+  image?: string;
+};
+
+type CarouselProps = {
+  items: CarouselItem[];
+};
+
+export function Carousel({ items = [] }: CarouselProps) {
   const [index, setIndex] = useState(0);
 
   if (!items.length) return null;
