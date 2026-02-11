@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-brand-dark fancy-border" >
-        <div className="flex flex-row items-center justify-between px-[33px] py-[13px]">
+    <nav className="bg-brand-dark fancy-border h-[78px]" >
+        <div className="flex h-full flex-row items-center justify-between px-[33px]">
 
             {/* LEFT SECTION — Logo */}
             <div className="w-auto">
@@ -13,7 +13,7 @@ export default function Navbar() {
                     <img
                         src="/images/logo.png"
                         alt="DMS Logo"
-                        className="w-full max-w-[48px]"
+                        className="w-full max-w-[48px] object-contain"
                     />
                 </div>
             </div>
@@ -61,7 +61,7 @@ export default function Navbar() {
                             "
                         >
                             Contact Us
-                            <img src="/icons/phone.svg" alt="Arrow Icon" className="w-3" />
+                            <img src="/icons/phone.svg" alt="Arrow Icon" className="w-3 object-contain" />
                         </button>
                     </div>
                 </div>

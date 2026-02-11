@@ -17,6 +17,7 @@ const config = {
                 tertiary: "#AA5BFF",
                 highlight: "#EBAFFF",
                 white: "#FFFFFF",
+                cardText: "#AAAAAA",
                 dark: "#101010"
             },
         }

@@ -12,22 +12,22 @@ export default function Navbar() {
                         <img
                             src="/images/logo.png"
                             alt="DMS Logo"
-                            className="w-full max-w-[119px]"
+                            className="w-full max-w-[119px] object-contain"
                         />
                     </div>
                 </div>
 
                 <div className="flex flex-row items-center justify-between gap-2.5">
                     <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
-                        <img src="/icons/instagram.svg" alt="Instagram" className="w-full max-w-[16.38px]" />
+                        <img src="/icons/instagram.svg" alt="Instagram" className="w-full max-w-[16.38px] object-contain" />
                     </a>
 
                     <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
-                        <img src="/icons/facebook.svg" alt="Facebook" className="w-full max-w-[8.4px]" />
+                        <img src="/icons/facebook.svg" alt="Facebook" className="w-full max-w-[8.4px] object-contain" />
                     </a>
 
                     <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
-                        <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-full max-w-[16.38px]" />
+                        <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-full max-w-[16.38px] object-contain" />
                     </a>
                 </div>
             </div>
