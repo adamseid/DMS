@@ -32,7 +32,7 @@ const defaultSteps = [
 
 export function VerticalTimeline({ steps = defaultSteps }) {
   const [activeStep, setActiveStep] = useState(0);
-  const stepRefs = useRef<HTMLDivElement[]>([]);
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [highlightProgress, setHighlightProgress] = useState(0); // 0 -> 1
 
@@ -115,7 +115,10 @@ useEffect(() => {
         {steps.map((step, i) => (
           <div
             key={i}
-            ref={(el) => (stepRefs.current[i] = el!)}
+            ref={(el) => {
+              stepRefs.current[i] = el
+            }}
+
             data-index={i}
           >
 

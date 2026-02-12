@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 
-// --- Data for the image accordion ---
-const accordionItems = [
+type AccordionItemData = {
+  id: number;
+  title: string;
+  imageUrl: string;
+};
+
+type AccordionItemProps = {
+  item: AccordionItemData;
+  isActive: boolean;
+  onMouseEnter: () => void;
+};
+
+// --- Data ---
+const accordionItems: AccordionItemData[] = [
   {
     id: 1,
     title: 'Voice Assistant',
@@ -29,8 +41,12 @@ const accordionItems = [
   },
 ];
 
-// --- Accordion Item Component ---
-const AccordionItem = ({ item, isActive, onMouseEnter }) => {
+// --- Accordion Item ---
+const AccordionItem = ({
+  item,
+  isActive,
+  onMouseEnter
+}: AccordionItemProps) => {
   return (
     <div
       className={`
@@ -42,61 +58,53 @@ const AccordionItem = ({ item, isActive, onMouseEnter }) => {
       `}
       onMouseEnter={onMouseEnter}
     >
-        <div className={`
-                ${isActive ? 'block' : 'hidden'}
-            `}>
-            {/* Background Image */}
-            <img
-                src={item.imageUrl}
-                alt={item.title}
-                className="inset-0 rounded-[8px] w-full h-[300px] object-cover rounded-[12px]"
-                onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x450/2d3748/ffffff?text=Image+Error'; }}
-            />
-        </div>
+      {isActive && (
+        <img
+          src={item.imageUrl}
+          alt={item.title}
+          className="w-full h-[300px] object-cover rounded-[12px]"
+        />
+      )}
 
-        {/* Caption Text */}
-        <span
-  className={`
-    absolute whitespace-nowrap transition-all duration-300 ease-in-out
-    font-segoe font-semibold text-[16px] leading-[24px] tracking-[0px] text-center align-middle text-white
-    ${
-      isActive
-        ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0' // active
-        : 'top-1/2 -translate-y-1/2 left-4 w-auto text-left md:top-1/2 md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 md:rotate-90' // inactive
-    }
-  `}
->
-  {item.title}
-</span>
-
+      <span
+        className={`
+          absolute whitespace-nowrap transition-all duration-300 ease-in-out
+          font-segoe font-semibold text-[16px] text-white
+          ${
+            isActive
+              ? 'bottom-6 left-1/2 -translate-x-1/2'
+              : 'top-1/2 -translate-y-1/2 left-4 md:left-1/2 md:-translate-x-1/2 md:rotate-90'
+          }
+        `}
+      >
+        {item.title}
+      </span>
     </div>
   );
 };
 
-
-// --- Main App Component ---
+// --- Main Component ---
 export function LandingAccordionItem() {
   const [activeIndex, setActiveIndex] = useState(4);
 
-  const handleItemHover = (index) => {
+  const handleItemHover = (index: number) => {
     setActiveIndex(index);
   };
 
   return (
     <div className="bg-transparent w-full">
-        <section className="w-full">
-            {/* Changed flex-col to flex-row to keep the layout consistent */}
-            <div className="flex flex-col md:flex-row items-center justify-start md:justify-center gap-4 overflow-x-auto p-4">
-                {accordionItems.map((item, index) => (
-                <AccordionItem
-                    key={item.id}
-                    item={item}
-                    isActive={index === activeIndex}
-                    onMouseEnter={() => handleItemHover(index)}
-                />
-                ))}
-            </div>
-        </section>
+      <section className="w-full">
+        <div className="flex flex-col md:flex-row items-center justify-start md:justify-center gap-4 overflow-x-auto p-4">
+          {accordionItems.map((item, index) => (
+            <AccordionItem
+              key={item.id}
+              item={item}
+              isActive={index === activeIndex}
+              onMouseEnter={() => handleItemHover(index)}
+            />
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
