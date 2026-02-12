@@ -34,11 +34,11 @@ const AccordionItem = ({ item, isActive, onMouseEnter }) => {
   return (
     <div
       className={`
-        bg-[linear-gradient(180deg,_#301D49_0%,_#101010_100%)]
-        relative h-[404px] gap-3 rounded-[12px] border border-[#FFFFFF26] 
+        bg-[linear-gradient(180deg,_#301D49_0%,_#101010_100%)] p-4
+        relative gap-3 rounded-[12px] border border-[#FFFFFF26] 
         overflow-hidden cursor-pointer
         transition-all duration-700 ease-in-out
-        ${isActive ? 'w-[500px]' : 'w-[80px]'}
+        ${isActive ? 'w-full md:w-[500px] h-[404px]' : 'w-full md:w-[80px] h-[100px] md:h-[404px]'}
       `}
       onMouseEnter={onMouseEnter}
     >
@@ -49,26 +49,26 @@ const AccordionItem = ({ item, isActive, onMouseEnter }) => {
             <img
                 src={item.imageUrl}
                 alt={item.title}
-                className="inset-0 rounded-[8px] w-full h-[300px] object-cover"
+                className="inset-0 rounded-[8px] w-full h-[300px] object-cover rounded-[12px]"
                 onError={(e) => { e.target.onerror = null; e.target.src = 'https://placehold.co/400x450/2d3748/ffffff?text=Image+Error'; }}
             />
         </div>
 
         {/* Caption Text */}
         <span
-            className={`
-            absolute whitespace-nowrap transition-all duration-300 ease-in-out
-            font-segoe font-semibold text-[16px] leading-[24px] tracking-[0px] text-center align-middle text-white
-            ${
-                isActive
-                ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0' // Active state: horizontal, bottom-center
-                // Inactive state: vertical, positioned at the bottom, for all screen sizes
-                : 'w-auto text-left bottom-24 left-1/2 -translate-x-1/2 rotate-90'
-            }
-            `}
-        >
-            {item.title}
-        </span>
+  className={`
+    absolute whitespace-nowrap transition-all duration-300 ease-in-out
+    font-segoe font-semibold text-[16px] leading-[24px] tracking-[0px] text-center align-middle text-white
+    ${
+      isActive
+        ? 'bottom-6 left-1/2 -translate-x-1/2 rotate-0' // active
+        : 'top-1/2 -translate-y-1/2 left-4 w-auto text-left md:top-1/2 md:-translate-y-1/2 md:left-1/2 md:-translate-x-1/2 md:rotate-90' // inactive
+    }
+  `}
+>
+  {item.title}
+</span>
+
     </div>
   );
 };
@@ -83,10 +83,10 @@ export function LandingAccordionItem() {
   };
 
   return (
-    <div className="bg-transparent">
+    <div className="bg-transparent w-full">
         <section className="w-full">
             {/* Changed flex-col to flex-row to keep the layout consistent */}
-            <div className="flex flex-row items-center justify-center gap-4 overflow-x-auto p-4">
+            <div className="flex flex-col md:flex-row items-center justify-start md:justify-center gap-4 overflow-x-auto p-4">
                 {accordionItems.map((item, index) => (
                 <AccordionItem
                     key={item.id}

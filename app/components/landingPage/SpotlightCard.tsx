@@ -44,7 +44,7 @@ export const SpotlightCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       className={cn(
-        "p-6 flex-1 flex flex-col w-full max-w-[341px] relative overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900 text-neutral-200 transition-colors hover:border-neutral-700",
+        "p-6 flex-1 flex flex-col w-full md:max-w-[341px] relative overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900 text-neutral-200 transition-colors hover:border-neutral-700",
         className
       )}
       {...props}
@@ -56,8 +56,8 @@ export const SpotlightCard = ({
           background: `radial-gradient(600px circle at ${position.x}px ${position.y}px, ${spotlightColor}, transparent 40%)`,
         }}
       />
-      <div className="relative z-10">
-        <div className="h-13 w-13 mb-[16.8px] flex items-center justify-center bg-[#251D2F] border border-white/8 rounded-[12px]">
+        <div className="relative z-10">
+          <div className="h-13 w-13 mb-[16.8px] flex items-center justify-center bg-[#251D2F] border border-white/8 rounded-[12px]">
             <img
               src={image}
               alt={imageAlt}

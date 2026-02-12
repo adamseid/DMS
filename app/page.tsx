@@ -7,6 +7,7 @@ import { LandingAccordionItem } from "./components/landingPage/InteractiveImageA
 import { Sparkles } from "./components/landingPage/Sparkles";
 import { Carousel } from "./components/landingPage/Carousel";
 import { VerticalTimeline } from "./components/landingPage/VerticalTimeline";
+import { ClientCard } from "./components/landingPage/ClientCard";
 
 const carouselData = [
   {
@@ -65,7 +66,7 @@ export default function Home() {
   <div className="bg-brand-dark">
     <div className="">
       {/* Sparkles */}
-      <div className="pointer-events-none absolute inset-x-0 top-[78px] h-[50vh]">
+      <div className="pointer-events-none absolute inset-x-0 top-[78px] h-[25vh] md:h-[50vh]">
         <Sparkles
           density={2400}
           color="#ffffff"
@@ -77,15 +78,15 @@ export default function Home() {
       </div>
 
       {/* Section A + B */}
-      <div className="flex flex-col items-center pt-[98px] max-w-[1440px] mx-auto px-5">
+      <div className="flex flex-col items-center md:pt-[98px] pt-[40px] md:pb-[94px] pb-[40px] max-w-[1440px] mx-auto px-5">
 
         {/* Hero Text */}
-        <h1 className="font-segoe font-normal text-[80px] leading-[82px] tracking-[-1px] text-center text-white align-middle pb-[50px]">
+        <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
           Custom web development, <br /> done with care.
         </h1>
 
         {/* Buttons */}
-        <div className="flex flex-row items-center justify-between gap-4 pb-[39px]">
+        <div className="flex md:flex-row md:items-center md:justify-between flex-col justify-start items-stretch gap-4 pb-[38px]">
 
           {/* Gradient Button */}
           <div className="
@@ -97,7 +98,7 @@ export default function Home() {
               shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
             ">
             <button className="
-                flex items-center gap-3 justify-between
+                flex items-center gap-3 justify-center
                 text-white font-semibold
                 rounded-xl
                 bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
@@ -114,7 +115,7 @@ export default function Home() {
           <div className="z-[1]">
             <button className="
                 min-h-[39px] h-full
-                flex items-center gap-3 justify-between
+                flex items-center gap-3 justify-center
                 shadow-[0_0_14px_0_#8F8F8F4D_inset]
                 border-[0.5px] border-[#FFFFFF4D]
                 rounded-xl 
@@ -131,21 +132,21 @@ export default function Home() {
         </div>
 
         {/* ContainerScroll */}
-        <ContainerScroll>
+        {/* <ContainerScroll>
           <img
             src="/images/video-placeholder.png"
             alt="hero"
             className="mx-auto rounded-2xl object-cover h-full w-full object-left-top"
             draggable={false}
           />
-        </ContainerScroll>
+        </ContainerScroll> */}
 
       </div>
 
       {/* Section C */}
-      <div className="flex flex-col items-center pt-[47px] pb-[58px] max-w-[1440px] mx-auto px-5">
+      <div className="flex flex-col items-center pt-[40px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto px-5">
         {/* Hero Text */}
-        <h2 className="font-segoe font-normal text-[64px] leading-[109px] tracking-[-2px] text-center text-white align-middle pb-[50px]">
+        <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
           Client Work
         </h2>
 
@@ -154,13 +155,13 @@ export default function Home() {
       </div>
 
       {/* Section D */}
-      <div className="flex flex-col items-center pt-[98px] pb-[98px] max-w-[1440px] mx-auto px-5">
+      <div className="flex flex-col items-center pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto px-5">
         {/* Hero Text */}
-        <h2 className="font-segoe font-normal text-[64px] leading-[109px] tracking-[-2px] text-center text-white align-middle pb-[50px]">
+        <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
           Why Choose Us?
         </h2>
 
-        <div className="flex flex-row gap-6 items-stretch justify-center">
+        <div className="flex flex-col justify-start items-center md:flex-row gap-6 md:items-stretch md:justify-center">
           <SpotlightCard 
             spotlightColor="rgba(151, 71, 255, 0.2)" 
             image="/images/super-communicative.png" 
@@ -189,16 +190,16 @@ export default function Home() {
       </div>
 
       {/* Section E */}
-      <div className="flex flex-row gap-[114px] justify-center items-top pt-[84px] pb-[49px] max-w-[1440px] mx-auto px-5">
-        <div>
-          <div className="w-full max-w-[501px] flex flex-col items-start justify-start sticky top-[10px]">
+      <div className="flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-top pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto px-5">
+        <div >
+          <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px]">
             {/* Hero Text */}
-            <h2 className="font-segoe font-normal text-[48px] leading-[56px] tracking-[-2px] text-left text-white align-middle pb-[16px]">
+            <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px] md:pb-[16px]">
               Our process for designing <br /> your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9747FF] to-[#EBAFFF]">perfect</span> website.
             </h2>
 
-            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-brand-cardText pb-[24px]">
-              Our goal is to make the perfect site for your business, well within your deadline.
+            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
+              Our goal is to make the perfect site for your <br className="md:hidden" /> business, well within your deadline.
             </p>
 
             {/* Gradient Button */}
@@ -211,7 +212,7 @@ export default function Home() {
                 shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
               ">
                 <button className="
-                    flex items-center gap-3 justify-between
+                    flex items-center gap-3 justify-center
                     text-white font-semibold
                     rounded-xl
                     bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
@@ -231,93 +232,72 @@ export default function Home() {
       </div>
 
       {/* Section F */}
-      <div className="flex flex-col items-center pt-[105px] pb-[0px] max-w-[1440px] mx-auto px-5">
+      <div className="flex flex-col items-center pt-[40px] md:pt-[105px] pb-[0px] max-w-[1440px] mx-auto px-5">
         {/* Hero Text */}
-        <h2 className="font-segoe font-normal text-[48px] leading-[56px] tracking-[-2px] text-center text-white align-middle pb-[32px]">
+        <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px] md:pb-[32px]">
           Some of our clients
         </h2>
 
-        <div className="max-w-[662px] w-full flex flex-row items-center justify-center flex-wrap">
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/ul.png"
-                alt="UL"
-                className="w-full max-w-[50px] object-contain"
-              />
-          </div>
+        <div className="max-w-[662px] w-full flex flex-wrap gap-x-[11px] gap-y-[13px] md:gap-y-[0px] md:gap-x-[7.68px]">
+          <ClientCard
+            imageSrc="/images/ul.png"
+            imageAlt="UL"
+            maxWidthClass = "max-w-[50px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/ford.png"
-                alt="ford"
-                className="w-full max-w-[100px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/ford.png"
+            imageAlt="Ford"
+            maxWidthClass = "max-w-[100px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/lg.png"
-                alt="lg"
-                className="w-full max-w-[83px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/lg.png"
+            imageAlt="LG"
+            maxWidthClass = "max-w-[83px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/fc.png"
-                alt="fc25"
-                className="w-full max-w-[74px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/fc.png"
+            imageAlt="FC25"
+            maxWidthClass = "max-w-[74px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/mlb.png"
-                alt="mlb"
-                className="w-full max-w-[72px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/mlb.png"
+            imageAlt="MLB"
+            maxWidthClass = "max-w-[72px]"
+          />
 
+          <ClientCard
+            imageSrc="/images/goldline-resources.png"
+            imageAlt="Goldline Resources"
+            maxWidthClass = "max-w-[50px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/goldline-resources.png"
-                alt="Goldline Resources"
-                className="w-full max-w-[50px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/canada.png"
+            imageAlt="Canada"
+            maxWidthClass = "max-w-[100px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/canada.png"
-                alt="Canada"
-                className="w-full max-w-[100px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/university-of-michigan.png"
+            imageAlt="University of Michigan"
+            maxWidthClass = "max-w-[83px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/university-of-michigan.png"
-                alt="University of Michigan"
-                className="w-full max-w-[83px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/alberta-government.png"
+            imageAlt="Alberta Government"
+            maxWidthClass = "max-w-[74px]"
+          />
 
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/alberta-government.png"
-                alt="Alberta Government"
-                className="w-full max-w-[74px] object-contain"
-              />
-          </div>
-
-          <div className="h-[97px] bg-transparent flex-none w-1/5 flex items-center justify-center">
-              <img
-                src="/images/university-of-calgary.png"
-                alt="University of Calgary"
-                className="w-full max-w-[72px] object-contain"
-              />
-          </div>
+          <ClientCard
+            imageSrc="/images/university-of-calgary.png"
+            imageAlt="University of Calgary"
+            maxWidthClass = "max-w-[72px]"
+          />
         </div>
       </div>
 
@@ -345,18 +325,18 @@ export default function Home() {
       </div>
 
       {/* Section G */}
-      <div className="flex flex-row gap-[123px] justify-center items-center pt-[83px] pb-[52px] max-w-[1440px] mx-auto px-5">
-        <div className="w-full max-w-[329px] flex flex-col items-start justify-start">
+      <div className="flex flex-col justify-start gap-[42px] md:flex-row md:justify-center items-center md:gap-[123px] pt-[40px] pb-[40px] md:pt-[83px] md:pb-[52px] max-w-[1440px] mx-auto px-5">
+        <div className="w-full md:max-w-[329px] flex flex-col items-center md:items-start justify-start">
             {/* Hero Text */}
-          <h2 className="font-segoe font-normal text-[48px] leading-[56px] tracking-[-2px] text-left text-white align-middle pb-[16px]">
+          <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[12px] md:pb-[16px]">
             Our Services
           </h2>
 
-          <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-brand-cardText pb-[25px]">
+          <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
             Practical, end-to-end solutions tailored to your business needs.
           </p>
 
-          {/* Gradient Button */}
+          {/* Gradient Button NEED WORK */}
           <div className="
               rounded-xl
               min-h-[39px] h-full 
@@ -365,7 +345,7 @@ export default function Home() {
               shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
             ">
             <button className="
-                flex items-center gap-3 justify-between
+                flex items-center gap-3 justify-center
                 text-white font-semibold
                 rounded-xl
                 bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
@@ -381,7 +361,6 @@ export default function Home() {
 
         <LandingAccordionItem />
       </div>
-      
 
       {/* Sparkles */}
       <div className="w-full overflow-hidden">
@@ -406,19 +385,17 @@ export default function Home() {
         </div>
       </div>
 
-
       {/* Section H */}
-      <div className="flex flex-col items-center pt-[0px] pb-[76px] max-w-[1440px] mx-auto px-5">
+      <div className="flex flex-col items-center pt-[0px] pb-[40px] md:pb-[76px] max-w-[1440px] mx-auto px-5">
         {/* Hero Text */}
-        <h2 className="font-segoe font-normal text-[48px] leading-[56px] tracking-[-2px] text-center text-white align-middle pb-[16px]">
+        <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[12px] md:pb-[16px]">
           Your Next Growth Move Starts Here
         </h2>
 
-        <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center text-brand-cardText pb-[25px]">
+        <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center text-brand-cardText pb-[24px]">
           Book a discovery call to explore the right growth strategy for your business.
         </p>
         
-
         {/* Gradient Button */}
         <div className="
             rounded-xl
@@ -428,7 +405,7 @@ export default function Home() {
             shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
           ">
           <button className="
-              flex items-center gap-3 justify-between
+              flex items-center gap-3 justify-center
               text-white font-semibold
               rounded-xl
               bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]

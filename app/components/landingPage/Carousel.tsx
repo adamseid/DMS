@@ -23,10 +23,10 @@ export function Carousel({ items = [] }: CarouselProps) {
     <div className="w-full">
 
       {/* CARD */}
-      <div className="bg-[#191919] p-5 rounded-xl flex items-center gap-4 border border-[#FFFFFF14]">
+      <div className="bg-[#191919] px-[14px] md:px-[19px] py-[20px] md:py-[20.5px] rounded-xl flex flex-col justify-start items-stretch md:flex-row md:justify-center md:items-center gap-4 border border-[#FFFFFF14]">
 
         {/* LEFT SIDE */}
-        <div className="px-4 w-[30%]">
+        <div className="px-4 md:w-[30%] w-full">
 
           {/* Logo */}
           {current.logo && (
@@ -64,7 +64,7 @@ export function Carousel({ items = [] }: CarouselProps) {
 
         {/* RIGHT SIDE IMAGE */}
         {current.image && (
-          <div className="w-[70%]">
+          <div className="md:w-[70%] w-full font-segoe text-[14px] leading-[20px] text-white">
             <img
               src={current.image}
               alt="case"

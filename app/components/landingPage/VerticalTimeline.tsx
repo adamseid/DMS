@@ -94,7 +94,7 @@ useEffect(() => {
 
 
   return (
-    <div ref={sectionRef} className="relative flex flex-row gap-[83px]">
+    <div ref={sectionRef} className="relative flex flex-row gap-[21px] md:gap-[83px]">
       {/* Vertical timeline line */}
       <div className="relative w-[3px]">
         {/* Full gray line */}
@@ -110,7 +110,7 @@ useEffect(() => {
         />
       </div>
 
-      {/* Cards container (unchanged) */}
+      {/* Cards container */}
       <div className="flex-1 flex flex-col justify-start items-start gap-[13px]">
         {steps.map((step, i) => (
           <div
