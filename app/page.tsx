@@ -68,7 +68,7 @@ export default function Home() {
       {/* Sparkles */}
       <div className="pointer-events-none absolute inset-x-0 top-[78px] h-[25vh] md:h-[50vh]">
         <Sparkles
-          density={2400}
+          density={1200}
           color="#ffffff"
           className="
             absolute inset-0 w-full h-full
@@ -107,7 +107,7 @@ export default function Home() {
                 cursor-pointer
               ">
               View our work
-              <img src="/icons/northEastArrow.svg" alt="Arrow Icon" className="w-3 object-contain" />
+              <img src="/icons/north-east-arrow.svg" alt="Arrow Icon" className="w-3 object-contain" />
             </button>
           </div>
 
@@ -126,7 +126,7 @@ export default function Home() {
                 cursor-pointer
               ">
               Book a Call
-              <img src="/icons/phone.svg" alt="Arrow Icon" className="w-3 object-contain" />
+              <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
             </button>
           </div>
         </div>
