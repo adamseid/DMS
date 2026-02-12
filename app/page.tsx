@@ -82,7 +82,7 @@ export default function Home() {
 
         {/* Hero Text */}
         <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
-          Custom web development, <br /> done with care.
+          Custom web development, <br className="hidden md:block" /> done with care.
         </h1>
 
         {/* Buttons */}
