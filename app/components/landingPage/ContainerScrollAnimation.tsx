@@ -1,6 +1,6 @@
 "use client";
 import React, { useRef } from "react";
-import { useScroll, useTransform, motion, MotionValue } from "framer-motion";
+import { useScroll, useTransform, motion, MotionValue, useSpring } from "framer-motion";
 
 export const ContainerScroll = ({
   children,
@@ -24,16 +24,18 @@ export const ContainerScroll = ({
     offset: ["start end", "center center"], // 50% in view
   });
 
-  const rotate = useTransform(
-    scrollYProgress,
-    [0, 1],
-    isMobile ? [30, 0] : [20, 0] // more aggressive rotation on mobile
-  );
+  const rotateStart = isMobile ? 60 : 40;
+  const rotateEnd = 0;
 
-  const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
-  const translate = useTransform(scrollYProgress, [0, 1], [0, -62.5]); // stronger vertical move
+  // map scrollYProgress → rotation, scale, translate
+  const rotateRaw = useTransform(scrollYProgress, [0, 0.75], [rotateStart, rotateEnd]);
+  const scaleRaw = useTransform(scrollYProgress, [0, 1], scaleDimensions());
+  const translateRaw = useTransform(scrollYProgress, [0, 1], [0, -62.5]);
 
-
+  // ✅ Wrap each motion value in a spring with zero velocity to prevent snapping
+  const rotate = useSpring(rotateRaw, { stiffness: 100, damping: 20, mass: 0.5 });
+  const scale = useSpring(scaleRaw, { stiffness: 100, damping: 20, mass: 0.5 });
+  const translate = useSpring(translateRaw, { stiffness: 100, damping: 20, mass: 0.5 });
 
   return (
     <div
@@ -67,8 +69,9 @@ export const Card = ({
         rotateX: rotate,
         scale,
         y: translate,
-        transformOrigin: "top center", // <- pivot from top
+        transformOrigin: "top center",
       }}
+      initial={false} // prevents initial snap from Framer Motion's default animation
       className="
         max-w-5xl mx-auto 
         w-full 
