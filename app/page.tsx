@@ -3,102 +3,14 @@
 import React from "react";
 import { ContainerScroll } from "./components/landingPage/ContainerScrollAnimation";
 import { SpotlightCard } from "./components/landingPage/SpotlightCard";
-import { LandingAccordionItem } from "./components/landingPage/InteractiveImageAccordion";
+import { InteractiveImageAccordion } from "./components/landingPage/InteractiveImageAccordion";
 import { Sparkles } from "./components/landingPage/Sparkles";
 import { Carousel } from "./components/landingPage/Carousel";
 import { VerticalTimeline } from "./components/landingPage/VerticalTimeline";
 import { ClientCard } from "./components/landingPage/ClientCard";
 import { PurpleGradientButton } from "./components/landingPage/PurpleGradientButton";
+import { carouselData, timelineData, accordionData } from "./pageData";
 
-const carouselData = [
-  {
-    logo: "/images/ksw-logo.png",
-    title: "KSW Lawyers",
-    description:
-      "KSW Lawyers is a long-established full-service Canadian law firm...",
-    bullets: [
-      "Increased qualified leads for KSW Lawyers by X% through targeted digital campaigns.",
-      "Improved website conversion rate by X% via UX and CTA optimization.",
-      "Reduced cost per lead by X% with smarter audience targeting."
-    ],
-    image: "/images/ksw-website.png"
-  },
-  {
-    logo: "/images/ksw-logo.png",
-    title: "KSW",
-    description:
-      "KSW Lawyers is a long-established full-service Canadian law firm...",
-    bullets: [
-      "Increased qualified leads for KSW Lawyers by X% through targeted digital campaigns.",
-      "Improved website conversion rate by X% via UX and CTA optimization.",
-      "Reduced cost per lead by X% with smarter audience targeting."
-    ],
-    image: "/images/ksw-website.png"
-  },
-  {
-    logo: "/images/ksw-logo.png",
-    title: "Lawyers",
-    description:
-      "KSW Lawyers is a long-established full-service Canadian law firm...",
-    bullets: [
-      "Increased qualified leads for KSW Lawyers by X% through targeted digital campaigns.",
-      "Improved website conversion rate by X% via UX and CTA optimization.",
-      "Reduced cost per lead by X% with smarter audience targeting."
-    ],
-    image: "/images/ksw-website.png"
-  },
-  {
-    logo: "/images/ksw-logo.png",
-    title: "KSWLawyers",
-    description:
-      "KSW Lawyers is a long-established full-service Canadian law firm...",
-    bullets: [
-      "Increased qualified leads for KSW Lawyers by X% through targeted digital campaigns.",
-      "Improved website conversion rate by X% via UX and CTA optimization.",
-      "Reduced cost per lead by X% with smarter audience targeting."
-    ],
-    image: "/images/ksw-website.png"
-  },
-];
-
-const timelineData = [
-  {
-    header: "Super Communicative",
-    paragraph: "You can find us via email, phone calls, text messages...",
-    image: "/images/super-communicative.png",
-    imageAlt: "Super Communicative"
-  },
-  {
-    header: "Transparent Pricing",
-    paragraph: "We provide clear, upfront pricing...",
-    image: "/images/transparent-pricing.png",
-    imageAlt: "Transparent Pricing"
-  },
-  {
-    header: "Super Communicative",
-    paragraph: "You can find us via email, phone calls, text messages...",
-    image: "/images/super-communicative.png",
-    imageAlt: "Super Communicative"
-  },
-  {
-    header: "Transparent Pricing",
-    paragraph: "We provide clear, upfront pricing...",
-    image: "/images/transparent-pricing.png",
-    imageAlt: "Transparent Pricing"
-  },
-  {
-    header: "Super Communicative",
-    paragraph: "You can find us via email, phone calls, text messages...",
-    image: "/images/super-communicative.png",
-    imageAlt: "Super Communicative"
-  },
-  {
-    header: "Transparent Pricing",
-    paragraph: "We provide clear, upfront pricing...",
-    image: "/images/transparent-pricing.png",
-    imageAlt: "Transparent Pricing"
-  }
-];
 
 export default function Home() {
   return (
@@ -226,7 +138,7 @@ export default function Home() {
           </div>
         </div>
 
-        <VerticalTimeline steps={timelineData} />
+        <VerticalTimeline cards={timelineData} />
       </div>
 
       {/* Section F */}
@@ -338,7 +250,7 @@ export default function Home() {
           <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
         </div>
 
-        <LandingAccordionItem />
+        <InteractiveImageAccordion accordionCards = {accordionData} />
       </div>
 
       {/* Sparkles */}

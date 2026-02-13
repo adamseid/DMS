@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import { SpotlightCard } from "./SpotlightCard";
 
-type Step = {
+type Card = {
   title?: string;
   description?: string;
   image?: string;
@@ -13,18 +13,14 @@ type Step = {
 };
 
 type VerticalTimelineProps = {
-  steps: Step[];
+  cards: Card[];
 };
 
-export function VerticalTimeline({ steps }: VerticalTimelineProps) {
-  const [activeStep, setActiveStep] = useState(0);
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+export function VerticalTimeline({ cards }: VerticalTimelineProps) {
+  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const sectionRef = useRef<HTMLDivElement>(null);
   const [highlightProgress, setHighlightProgress] = useState(0);
 
-  /* =========================
-     SCROLL EFFECT
-  ========================= */
   useEffect(() => {
     if (!sectionRef.current) return;
 
@@ -72,8 +68,6 @@ export function VerticalTimeline({ steps }: VerticalTimelineProps) {
     };
   }, []);
 
-  /* ========================= */
-
   return (
     <div ref={sectionRef} className="relative flex flex-row gap-[21px] md:gap-[83px]">
 
@@ -92,19 +86,19 @@ export function VerticalTimeline({ steps }: VerticalTimelineProps) {
 
       {/* Cards */}
       <div className="flex-1 flex flex-col gap-[13px]">
-        {steps.map((step, i) => (
+        {cards.map((card, i) => (
           <div
             key={i}
             ref={(el) => {
-              stepRefs.current[i] = el;
+              cardRefs.current[i] = el;
             }}
           >
             <SpotlightCard
-              spotlightColor={step.spotlightColor ?? "rgba(151, 71, 255, 0.2)"}
-              image={step.image}
-              imageAlt={step.imageAlt}
-              header={step.header}
-              paragraph={step.paragraph}
+              spotlightColor={card.spotlightColor ?? "rgba(151, 71, 255, 0.2)"}
+              image={card.image}
+              imageAlt={card.imageAlt}
+              header={card.header}
+              paragraph={card.paragraph}
             />
           </div>
         ))}

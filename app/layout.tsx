@@ -17,6 +17,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Digital Marketing Solutions",
   description: "Digital Marketing Agency",
+  icons: {
+    icon: "/favicon-3.png", 
+  },
 };
 
 export default function RootLayout({
