@@ -24,9 +24,14 @@ export const ContainerScroll = ({
     offset: ["start end", "center center"], // 50% in view
   });
 
-const rotate = useTransform(scrollYProgress, [0, 1], [20, 0]); // stronger rotation
-const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
-const translate = useTransform(scrollYProgress, [0, 1], [0, -62.5]); // stronger vertical move
+  const rotate = useTransform(
+    scrollYProgress,
+    [0, 1],
+    isMobile ? [30, 0] : [20, 0] // more aggressive rotation on mobile
+  );
+
+  const scale = useTransform(scrollYProgress, [0, 1], scaleDimensions());
+  const translate = useTransform(scrollYProgress, [0, 1], [0, -62.5]); // stronger vertical move
 
 
 
@@ -62,6 +67,7 @@ export const Card = ({
         rotateX: rotate,
         scale,
         y: translate,
+        transformOrigin: "top center", // <- pivot from top
       }}
       className="
         max-w-5xl mx-auto 

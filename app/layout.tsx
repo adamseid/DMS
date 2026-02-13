@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Digital Marketing Solutions",
   description: "Digital Marketing Agency",
   icons: {
-    icon: "/favicon-3.png", 
+    icon: "/favicon/favicon-3.png", 
   },
 };
 
