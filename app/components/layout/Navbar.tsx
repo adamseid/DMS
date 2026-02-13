@@ -67,7 +67,7 @@ export default function Navbar() {
                         <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
                         </button>
                     </div>
-                </div>``
+                </div>
 
                 {/* MOBILE BUTTON */}
                 <div className="md:hidden">
