@@ -29,7 +29,7 @@ export default function Home() {
       </div>
 
       {/* Section A + B */}
-      <div className="flex flex-col items-center md:pt-[98px] pt-[40px] md:pb-[94px] pb-[40px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center md:pt-[98px] pt-[40px] md:pb-[0px] pb-[40px] max-w-[1440px] mx-auto px-3">
 
         {/* Hero Text */}
         <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
@@ -63,14 +63,14 @@ export default function Home() {
         </div>
 
         {/* ContainerScroll */}
-        {/* <ContainerScroll>
+        <ContainerScroll>
           <img
             src="/images/video-placeholder.png"
             alt="hero"
             className="mx-auto rounded-2xl object-cover h-full w-full object-left-top"
             draggable={false}
           />
-        </ContainerScroll> */}
+        </ContainerScroll>
 
       </div>
 
