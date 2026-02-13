@@ -8,6 +8,7 @@ import { Sparkles } from "./components/landingPage/Sparkles";
 import { Carousel } from "./components/landingPage/Carousel";
 import { VerticalTimeline } from "./components/landingPage/VerticalTimeline";
 import { ClientCard } from "./components/landingPage/ClientCard";
+import { PurpleGradientButton } from "./components/landingPage/PurpleGradientButton";
 
 const carouselData = [
   {
@@ -60,6 +61,44 @@ const carouselData = [
   },
 ];
 
+const timelineData = [
+  {
+    header: "Super Communicative",
+    paragraph: "You can find us via email, phone calls, text messages...",
+    image: "/images/super-communicative.png",
+    imageAlt: "Super Communicative"
+  },
+  {
+    header: "Transparent Pricing",
+    paragraph: "We provide clear, upfront pricing...",
+    image: "/images/transparent-pricing.png",
+    imageAlt: "Transparent Pricing"
+  },
+  {
+    header: "Super Communicative",
+    paragraph: "You can find us via email, phone calls, text messages...",
+    image: "/images/super-communicative.png",
+    imageAlt: "Super Communicative"
+  },
+  {
+    header: "Transparent Pricing",
+    paragraph: "We provide clear, upfront pricing...",
+    image: "/images/transparent-pricing.png",
+    imageAlt: "Transparent Pricing"
+  },
+  {
+    header: "Super Communicative",
+    paragraph: "You can find us via email, phone calls, text messages...",
+    image: "/images/super-communicative.png",
+    imageAlt: "Super Communicative"
+  },
+  {
+    header: "Transparent Pricing",
+    paragraph: "We provide clear, upfront pricing...",
+    image: "/images/transparent-pricing.png",
+    imageAlt: "Transparent Pricing"
+  }
+];
 
 export default function Home() {
   return (
@@ -89,27 +128,7 @@ export default function Home() {
         <div className="flex md:flex-row md:items-center md:justify-between flex-col justify-start items-stretch gap-4 pb-[38px]">
 
           {/* Gradient Button */}
-          <div className="
-              z-[1]
-              rounded-xl
-              min-h-[39px] h-full 
-              p-[1.5px] 
-              bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-              shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
-            ">
-            <button className="
-                flex items-center gap-3 justify-center
-                text-white font-semibold
-                rounded-xl
-                bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-                px-[29px] py-[10px]
-                w-full h-full
-                cursor-pointer
-              ">
-              View our work
-              <img src="/icons/north-east-arrow.svg" alt="Arrow Icon" className="w-3 object-contain" />
-            </button>
-          </div>
+          <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="View our work" />
 
           {/* Dark Button */}
           <div className="z-[1]">
@@ -203,32 +222,11 @@ export default function Home() {
             </p>
 
             {/* Gradient Button */}
-            <div>
-              <div className="
-                rounded-xl
-                min-h-[39px] h-full 
-                p-[1.5px] 
-                bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-                shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
-              ">
-                <button className="
-                    flex items-center gap-3 justify-center
-                    text-white font-semibold
-                    rounded-xl
-                    bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-                    px-[29px] py-[10px]
-                    w-full h-full
-                    cursor-pointer
-                  ">
-                  Book a Call
-                  <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
-                </button>
-              </div>
-            </div>
+            <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
           </div>
         </div>
 
-        <VerticalTimeline />
+        <VerticalTimeline steps={timelineData} />
       </div>
 
       {/* Section F */}
@@ -336,27 +334,8 @@ export default function Home() {
             Practical, end-to-end solutions tailored to your business needs.
           </p>
 
-          {/* Gradient Button NEED WORK */}
-          <div className="
-              rounded-xl
-              min-h-[39px] h-full 
-              p-[1.5px] 
-              bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-              shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
-            ">
-            <button className="
-                flex items-center gap-3 justify-center
-                text-white font-semibold
-                rounded-xl
-                bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-                px-[29px] py-[10px]
-                w-full h-full
-                cursor-pointer
-              ">
-              Book a Call
-              <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
-            </button>
-          </div>
+          {/* Gradient Button */}
+          <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
         </div>
 
         <LandingAccordionItem />
@@ -397,26 +376,7 @@ export default function Home() {
         </p>
         
         {/* Gradient Button */}
-        <div className="
-            rounded-xl
-            min-h-[39px] h-full 
-            p-[1.5px] 
-            bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-            shadow-[0_0_14px_0_#FFFFFF4D_inset,0_0_30.3px_0_#9747FF66]
-          ">
-          <button className="
-              flex items-center gap-3 justify-center
-              text-white font-semibold
-              rounded-xl
-              bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]
-              px-[29px] py-[10px]
-              w-full h-full
-              cursor-pointer
-            ">
-            Book a Call
-            <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
-          </button>
-        </div>
+        <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
       </div>
     </div>
   </div>
