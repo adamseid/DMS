@@ -80,7 +80,7 @@ export default function Home() {
       </div>
 
       {/* Section A + B */}
-      <div className="flex flex-col items-center md:pt-[98px] pt-[40px] md:pb-[0px] pb-[40px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center md:pt-[98px] pt-[40px] md:pb-[0px] pb-[0px] max-w-[1440px] mx-auto px-3">
 
         {/* Hero Text */}
         <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
@@ -126,7 +126,7 @@ export default function Home() {
       </div>
 
       {/* Section C */}
-      <div className="flex flex-col items-center pt-[40px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto px-3">
         {/* Hero Text */}
         <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
           Client Work
