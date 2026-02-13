@@ -391,7 +391,19 @@ class Star {
 export function SpiralAnimation() {
     const canvasRef = useRef<HTMLCanvasElement>(null)
     const animationRef = useRef<AnimationController | null>(null)
-    const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight })
+    const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+    useEffect(() => {
+    setDimensions({ width: window.innerWidth, height: window.innerHeight });
+
+    const handleResize = () => {
+        setDimensions({ width: window.innerWidth, height: window.innerHeight });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+    }, []);
+
     
     // 处理窗口大小变化
     useEffect(() => {
