@@ -87,7 +87,7 @@ export const Card = ({
         shadow-2xl
       "
     >
-      <div className="h-full w-full overflow-hidden rounded-[44px] bg-[#222222]">
+      <div className="h-full w-full overflow-hidden rounded-[46px] bg-[#222222]">
         {children}
       </div>
     </motion.div>

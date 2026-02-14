@@ -16,7 +16,7 @@ export default function Home() {
   <div className="bg-brand-dark">
     <div className="">
       {/* Sparkles */}
-      <div className="pointer-events-none absolute inset-x-0 top-[78px] h-[25vh] md:h-[50vh]">
+      <div className="absolute inset-x-0 top-[78px] h-[20vh] md:h-[50vh]">
         <Sparkles
           density={1200}
           color="#ffffff"
@@ -66,7 +66,7 @@ export default function Home() {
           <img
             src="/images/video-placeholder.png"
             alt="hero"
-            className="mx-auto rounded-2xl object-cover h-full w-full object-left-top"
+            className="mx-auto rounded-2xl object-cover h-full w-full object-left-top cursor-pointer"
             draggable={false}
           />
         </ContainerScroll>
