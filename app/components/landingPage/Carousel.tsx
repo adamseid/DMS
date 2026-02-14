@@ -79,14 +79,14 @@ export function Carousel({ items = [], autoSlideInterval = 5000 }: CarouselProps
     >
       {/* SLIDE TRACK */}
       <div
-        className="flex mr-[20px] transition-transform duration-700 ease-in-out"
+        className="flex md:mr-[20px] mr-3 transition-transform duration-700 ease-in-out"
         style={{ transform: `translateX(-${index * 100}%)` }}
       >
         {items.map((item, slideIndex) => (
           <div key={slideIndex} className="w-full flex-shrink-0">
 
             {/* CARD */}
-            <div className="ml-[20px] bg-[#191919] px-[14px] md:px-[19px] py-[20px] md:py-[20.5px] rounded-xl flex flex-col justify-start items-stretch md:flex-row md:justify-center md:items-center gap-4 border border-[#FFFFFF14]">
+            <div className="md:ml-[20px] ml-3 bg-[#191919] px-[14px] md:px-[19px] py-[20px] md:py-[20.5px] rounded-xl flex flex-col justify-start items-stretch md:flex-row md:justify-center md:items-center gap-4 border border-[#FFFFFF14]">
 
               {/* LEFT SIDE */}
               <div className="px-4 md:w-[30%] w-full">

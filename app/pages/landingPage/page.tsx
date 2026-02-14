@@ -74,7 +74,7 @@ export default function Home() {
       </div>
 
       {/* Section C */}
-      <div className="flex flex-col items-center pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto md:px-10 px-3">
+      <div className="flex flex-col items-center pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto md:px-10">
         {/* Hero Text */}
         <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
           Client Work
