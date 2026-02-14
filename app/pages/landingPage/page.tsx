@@ -28,7 +28,7 @@ export default function Home() {
       </div>
 
       {/* Section A + B */}
-      <div className="flex flex-col items-center md:pt-[98px] pt-[71px] md:pb-[0px] pb-[0px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center md:pt-[98px] pt-[71px] md:pb-[0px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
 
         {/* Hero Text */}
         <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
@@ -74,7 +74,7 @@ export default function Home() {
       </div>
 
       {/* Section C */}
-      <div className="flex flex-col items-center pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto md:px-10 px-3">
         {/* Hero Text */}
         <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
           Client Work
@@ -85,7 +85,7 @@ export default function Home() {
       </div>
 
       {/* Section D */}
-      <div className="flex flex-col items-center pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto md:px-10 px-3">
         {/* Hero Text */}
         <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
           Why Choose Us?
@@ -120,7 +120,7 @@ export default function Home() {
       </div>
 
       {/* Section E */}
-      <div className="flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-top pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-top pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3">
         <div >
           <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px]">
             {/* Hero Text */}
@@ -141,7 +141,7 @@ export default function Home() {
       </div>
 
       {/* Section F */}
-      <div className="flex flex-col items-center pt-[40px] md:pt-[105px] pb-[0px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center pt-[40px] md:pt-[105px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
         {/* Hero Text */}
         <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px] md:pb-[32px]">
           Some of our clients
@@ -234,7 +234,7 @@ export default function Home() {
       </div>
 
       {/* Section G */}
-      <div className="flex flex-col justify-start gap-[42px] md:flex-row md:justify-center items-center md:gap-[123px] pt-[40px] pb-[40px] md:pt-[83px] md:pb-[52px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col justify-start gap-[42px] md:flex-row md:justify-center items-center md:gap-[123px] pt-[40px] pb-[40px] md:pt-[83px] md:pb-[52px] max-w-[1440px] mx-auto md:px-10 px-3">
         <div className="w-full md:max-w-[329px] flex flex-col items-center md:items-start justify-start">
             {/* Hero Text */}
           <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[12px] md:pb-[16px]">
@@ -276,7 +276,7 @@ export default function Home() {
       </div>
 
       {/* Section H */}
-      <div className="flex flex-col items-center pt-[0px] pb-[40px] md:pb-[76px] max-w-[1440px] mx-auto px-3">
+      <div className="flex flex-col items-center pt-[0px] pb-[40px] md:pb-[76px] max-w-[1440px] mx-auto md:px-10 px-3">
         {/* Hero Text */}
         <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[12px] md:pb-[16px]">
           Your Next Growth Move Starts Here
