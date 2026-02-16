@@ -139,32 +139,26 @@ export default function Home() {
 
       {/* Section E */}
       <div className="relative">
-        {/* Gridline Overlay */}
         <GridOverlay top="top-[-20px]" height="h-[1200px]" opacity="opacity-[0.1]" zIndex="z-0" />
-        {/* Ellipse Shadow Overlay */}
         <ShadowOverlay height="30%" top="10%" />
 
-        {/* Wrapper */}
-        <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-top bg-transparent z-5 pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3">
-          <div>
-            <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px]">
-              {/* Hero Text */}
-              <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px] md:pb-[16px]">
-                Our process for designing <br /> your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9747FF] to-[#EBAFFF]">perfect</span> website.
-              </h2>
+        <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-start bg-transparent pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3 z-[3]">
+          <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px] z-[3]">
+            <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px]">
+              Our process for designing <br /> your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9747FF] to-[#EBAFFF]">perfect</span> website.
+            </h2>
 
-              <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
-                Our goal is to make the perfect site for your <br className="md:hidden" /> business, well within your deadline.
-              </p>
+            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
+              Our goal is to make the perfect site for your <br className="md:hidden" /> business, well within your deadline.
+            </p>
 
-              {/* Gradient Button */}
-              <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
-            </div>
+            <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
           </div>
 
           <VerticalTimeline cards={timelineData} />
         </div>
       </div>
+
 
       {/* Section F */}
       <div className="relative">
