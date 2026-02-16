@@ -1,8 +1,8 @@
 type GridOverlayProps = {
-  height?: string;   // Tailwind height class, e.g., "h-screen" or "h-[1097px]"
-  top?: string;      // Tailwind top class, e.g., "top-0" or "top-[612px]"
-  zIndex?: string;   // Tailwind z-index class, e.g., "z-10"
-  opacity?: string;  // Tailwind opacity class, e.g., "opacity-50"
+  height?: string;
+  top?: string;
+  zIndex?: string;
+  opacity?: string;
 };
 
 export function GridOverlay({

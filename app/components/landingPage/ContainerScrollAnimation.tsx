@@ -21,23 +21,21 @@ export const ContainerScroll = ({
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "center center"], // 50% in view
+    offset: ["start end", "center center"],
   });
 
   const rotateStart = isMobile ? 60 : 40;
   const rotateEnd = 0;
 
-  // map scrollYProgress → rotation, scale, translate
   const rotateRaw = useTransform(
     scrollYProgress,
-    [0, isMobile ? 1 : 0.75], // extend end on mobile
+    [0, isMobile ? 1 : 0.75],
     [rotateStart, 0]
   );
 
   const scaleRaw = useTransform(scrollYProgress, [0, 1], scaleDimensions());
   const translateRaw = useTransform(scrollYProgress, [0, 1], [0, -62.5]);
 
-  // ✅ Wrap each motion value in a spring with zero velocity to prevent snapping
   const rotate = useSpring(rotateRaw, { stiffness: 100, damping: 20, mass: 0.5 });
   const scale = useSpring(scaleRaw, { stiffness: 100, damping: 20, mass: 0.5 });
   const translate = useSpring(translateRaw, { stiffness: 100, damping: 20, mass: 0.5 });
@@ -76,7 +74,7 @@ export const Card = ({
         y: translate,
         transformOrigin: "top center",
       }}
-      initial={false} // prevents initial snap from Framer Motion's default animation
+      initial={false}
       className="
         max-w-5xl mx-auto 
         w-full 

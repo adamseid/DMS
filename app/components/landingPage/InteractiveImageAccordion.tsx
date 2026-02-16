@@ -59,7 +59,6 @@ const AccordionItem = ({
   );
 };
 
-// --- Main Component ---
 export function InteractiveImageAccordion({ accordionCards }: InteractiveImageAccordionProps) {
   const [activeIndex, setActiveIndex] = useState(0);
 
