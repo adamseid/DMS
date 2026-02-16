@@ -4,6 +4,7 @@ type AccordionCard = {
   id: number;
   title: string;
   imageUrl: string;
+  imageAlt: string;
 };
 
 type AccordionItemProps = {
@@ -36,7 +37,7 @@ const AccordionItem = ({
       {isActive && (
         <img
           src={item.imageUrl}
-          alt={item.title}
+          alt={item.imageAlt}
           className="w-full h-[300px] object-cover rounded-[12px]"
         />
       )}
@@ -60,7 +61,7 @@ const AccordionItem = ({
 
 // --- Main Component ---
 export function InteractiveImageAccordion({ accordionCards }: InteractiveImageAccordionProps) {
-  const [activeIndex, setActiveIndex] = useState(4);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const handleItemHover = (index: number) => {
     setActiveIndex(index);
@@ -69,7 +70,7 @@ export function InteractiveImageAccordion({ accordionCards }: InteractiveImageAc
   return (
     <div className="bg-transparent w-full">
       <section className="w-full">
-        <div className="flex flex-col md:flex-row items-center justify-start md:justify-center gap-4 overflow-x-auto p-4">
+        <div className="flex flex-col md:flex-row items-center justify-start md:justify-end gap-4 overflow-x-auto p-4">
           {accordionCards.map((item, index) => (
             <AccordionItem
               key={item.id}

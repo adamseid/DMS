@@ -5,6 +5,7 @@ interface SpotlightCardProps extends React.HTMLAttributes<HTMLDivElement> {
   spotlightColor?: string;
   image?: string;
   imageAlt?: string;
+  imgBg?: string;
   header?: string;
   paragraph?: string;
 }
@@ -13,6 +14,7 @@ export const SpotlightCard = ({
   className,
   image,
   imageAlt,
+  imgBg = "bg-[#251D2F]",
   header,
   paragraph,
   spotlightColor = "rgba(255, 255, 255, 0.15)",
@@ -57,7 +59,7 @@ export const SpotlightCard = ({
         }}
       />
         <div className="relative z-10">
-          <div className="h-13 w-13 mb-[16.8px] flex items-center justify-center bg-[#251D2F] border border-white/8 rounded-[12px]">
+          <div className={`h-13 w-13 mb-[16.8px] flex items-center justify-center ${imgBg} border border-white/8 rounded-[12px]`}>
             <img
               src={image}
               alt={imageAlt}

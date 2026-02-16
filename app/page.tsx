@@ -25,7 +25,7 @@ const Page = () => {
   }
 
   return (
-    <div className="fixed inset-0 w-full h-full overflow-hidden bg-black">
+    <div className="fixed inset-0 w-full h-full overflow-hidden bg-black z-50">
       {/* Spiral Animation */}
       <div className="absolute inset-0">
         <SpiralAnimation />

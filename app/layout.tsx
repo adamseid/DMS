@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Digital Marketing Solutions",
-  description: "Digital Marketing Agency",
+  title: "Distinctive Marketing Solutions",
+  description: "Distinctive Marketing Solutions is a full-service marketing agency specializing in innovative strategies and creative solutions to help businesses stand out in the digital landscape.",
   icons: {
     icon: "/favicon/favicon-3.png", 
   },

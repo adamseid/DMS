@@ -45,7 +45,7 @@ export const ContainerScroll = ({
   return (
     <div
       ref={containerRef}
-      className="relative w-full flex items-center justify-center"
+      className="relative w-full flex items-center justify-center z-48"
       style={{ paddingTop: 62.5, paddingBottom: 0 }}
     >
       <div className="w-full max-w-5xl relative" style={{ perspective: 1000 }}>

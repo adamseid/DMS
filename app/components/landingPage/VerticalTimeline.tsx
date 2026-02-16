@@ -6,6 +6,7 @@ type Card = {
   title?: string;
   description?: string;
   image?: string;
+  imgBg?: string;
   imageAlt?: string;
   header?: string;
   paragraph?: string;
@@ -96,6 +97,7 @@ export function VerticalTimeline({ cards }: VerticalTimelineProps) {
             <SpotlightCard
               spotlightColor={card.spotlightColor ?? "rgba(151, 71, 255, 0.2)"}
               image={card.image}
+              imgBg={card.imgBg}
               imageAlt={card.imageAlt}
               header={card.header}
               paragraph={card.paragraph}

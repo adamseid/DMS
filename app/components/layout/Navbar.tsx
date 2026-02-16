@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <>
-        <nav className="bg-brand-dark fancy-border h-[78px] relative z-50">
+        <nav className="bg-brand-dark fancy-border h-[78px] relative z-10">
             <div className="flex h-full flex-row items-center justify-between px-[33px]">
                 {/* LEFT SECTION */}
                 <div className="w-auto">
@@ -97,9 +97,9 @@ export default function Navbar() {
 
         {/* MOBILE OVERLAY */}
         <div
-            className={`fixed top-[78px] left-0 w-full h-[calc(100vh-78px)] bg-[#101010] z-40 transition-transform duration-500  ${
-                menuOpen ? "translate-y-0" : "-translate-y-full"
-            }`}
+            className={`fixed pt-[78px] inset-0 w-full h-screen bg-[#101010] z-49
+            transition-transform duration-500 ease-in-out
+            ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}
         >
             <div className="flex flex-col items-center justify-start gap-8 pt-[55px]">
                 {/* Links */}
