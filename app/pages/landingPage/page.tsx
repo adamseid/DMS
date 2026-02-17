@@ -32,10 +32,10 @@ export default function Home() {
       {/* Section A + B */}
       <div className="relative">
         {/* Ellipse Shadow Overlay */}
-        <ShadowOverlay height="80%" top="0px" />
+        <ShadowOverlay height="80%" top="0px" zIndex="z-2" />
 
         {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-48 md:pt-[98px] pt-[71px] md:pb-[0px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
+        <div className="relative flex flex-col items-center bg-transparent z-10 md:pt-[98px] pt-[71px] md:pb-[0px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
           {/* Hero Text */}
           <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
             Custom web development, <br /> done with care.
@@ -48,7 +48,7 @@ export default function Home() {
             <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="View our work" />
 
             {/* Dark Button */}
-            <div className="z-[1]">
+            <div className="z-10">
               <button className="
                   min-h-[39px] h-full
                   flex items-center gap-3 justify-center
@@ -72,7 +72,7 @@ export default function Home() {
             <img
               src="/images/video-placeholder.png"
               alt="hero"
-              className="z-48 mx-auto rounded-2xl object-cover h-full w-full object-left-top cursor-pointer"
+              className="z-10 mx-auto rounded-2xl object-cover h-full w-full object-left-top cursor-pointer"
               draggable={false}
             />
           </ContainerScroll>
@@ -82,12 +82,12 @@ export default function Home() {
       {/* Section C */}
       <div className="relative">
         {/* Gridline Overlay */}
-        <GridOverlay top="top-[-612px]" height="h-[1097px]" opacity="opacity-[0.1]" zIndex="z-0" />
+        <GridOverlay top="top-[-612px]" height="h-[1097px]" opacity="opacity-[0.1]" zIndex="z-1" />
         {/* Ellipse Shadow Overlay */}
-        <ShadowOverlay height="30%" top="90%" />
+        <ShadowOverlay height="30%" top="90%" zIndex="z-2" />
 
         {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-48 pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto md:px-10">
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto md:px-10">
           {/* Hero Text */}
           <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
             Client Work
@@ -100,10 +100,10 @@ export default function Home() {
       {/* Section D */}
       <div className="relative">
         {/* Gridline Overlay */}
-        <GridOverlay top="top-[-20px]" height="h-[775px]" opacity="opacity-[0.1]" zIndex="z-0" />
+        <GridOverlay top="top-[-20px]" height="h-[775px]" opacity="opacity-[0.1]" zIndex="z-1" />
 
         {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-48 pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto md:px-10 px-3">
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto md:px-10 px-3">
           {/* Hero Text */}
           <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
             Why Choose Us?
@@ -139,11 +139,11 @@ export default function Home() {
 
       {/* Section E */}
       <div className="relative">
-        <GridOverlay top="top-[-20px]" height="h-[1200px]" opacity="opacity-[0.1]" zIndex="z-0" />
-        <ShadowOverlay height="30%" top="10%" />
+        <GridOverlay top="top-[-20px]" height="h-[1200px]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="30%" top="10%" zIndex="z-2" />
 
-        <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-start bg-transparent pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3 z-[3]">
-          <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px] z-[3]">
+        <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-start bg-transparent pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3 z-10">
+          <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px] z-10">
             <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px]">
               Our process for designing <br /> your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9747FF] to-[#EBAFFF]">perfect</span> website.
             </h2>
@@ -159,14 +159,13 @@ export default function Home() {
         </div>
       </div>
 
-
       {/* Section F */}
       <div className="relative">
         {/* Ellipse Shadow Overlay */}
-        <ShadowOverlay height="100%" top="0%" />
+        <ShadowOverlay height="100%" top="0%" zIndex="z-2" />
 
         {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-48 pt-[40px] md:pt-[105px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] md:pt-[105px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
           {/* Hero Text */}
           <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px] md:pb-[32px]">
             Some of our clients
@@ -248,7 +247,7 @@ export default function Home() {
               before:bg-[radial-gradient(circle_at_bottom_center,#9747FF_0%,#724EA1_30%,#101010_52.5%)] 
               before:opacity-40 
               before:[backdrop-filter:blur(50px)]" />
-          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] bg-[linear-gradient(180deg,#9747FF_0%,#101010_25.2%)] p-[1px]">
+          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-3 w-[200%] rounded-[100%] bg-[linear-gradient(180deg,#9747FF_0%,#101010_25.2%)] p-[1px]">
             <div className="bg-black rounded-[100%] w-full h-full" />
           </div>
             <Sparkles
@@ -262,7 +261,7 @@ export default function Home() {
       {/* Section G */}
       <div className="relative">
         {/* Wrapper */}
-        <div className="relative flex flex-col justify-start gap-[42px] md:flex-row md:justify-center items-center md:gap-[123px] bg-transparent z-5 pt-[40px] pb-[40px] md:pt-[52px] md:pb-[52px] max-w-[1440px] mx-auto md:px-15 px-3">
+        <div className="relative flex flex-col justify-start gap-[42px] md:flex-row md:justify-center items-center md:gap-[123px] bg-transparent z-10 pt-[40px] pb-[40px] md:pt-[52px] md:pb-[52px] max-w-[1440px] mx-auto md:px-15 px-3">
           <div className="w-full md:max-w-[329px] flex flex-col items-center md:items-start justify-start">
             {/* Hero Text */}
             <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[12px] md:pb-[16px]">
@@ -293,7 +292,7 @@ export default function Home() {
               before:bg-[radial-gradient(circle_at_bottom_center,#9747FF_0%,#724EA1_30%,#101010_52.5%)] 
               before:opacity-40 
               before:[backdrop-filter:blur(50px)]" />
-          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-10 w-[200%] rounded-[100%] bg-[linear-gradient(180deg,#9747FF_0%,#101010_25.2%)] p-[1px]">
+          <div className="absolute -left-1/2 top-1/2 aspect-[1/0.7] z-3 w-[200%] rounded-[100%] bg-[linear-gradient(180deg,#9747FF_0%,#101010_25.2%)] p-[1px]">
             <div className="bg-black rounded-[100%] w-full h-full" />
           </div>
           <Sparkles
@@ -307,7 +306,7 @@ export default function Home() {
       {/* Section H */}
       <div className="relative">
         {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-48 pt-[0px] pb-[40px] md:pb-[76px] max-w-[1440px] mx-auto md:px-10 px-3">
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[0px] pb-[40px] md:pb-[76px] max-w-[1440px] mx-auto md:px-10 px-3">
           {/* Hero Text */}
           <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[12px] md:pb-[16px]">
             Your Next Growth Move Starts Here

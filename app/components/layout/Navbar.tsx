@@ -22,7 +22,7 @@ export default function Navbar() {
 
   return (
     <>
-        <nav className="bg-brand-dark fancy-border h-[78px] relative z-10">
+        <nav className="bg-brand-dark fancy-border h-[78px] relative z-49">
             <div className="flex h-full flex-row items-center justify-between px-[33px]">
                 {/* LEFT SECTION */}
                 <div className="w-auto">
@@ -47,7 +47,7 @@ export default function Navbar() {
 
                     {/* Gradient Button */}
                     <div className="
-                        z-[1]
+                        z-1
                         rounded-xl
                         h-full 
                         p-[1.5px] 
@@ -72,7 +72,7 @@ export default function Navbar() {
                 {/* MOBILE BUTTON */}
                 <div className="md:hidden">
                     <div className="
-                        z-[1]
+                        z-1
                         rounded-xl
                         h-full 
                         p-[1.5px] 
@@ -97,7 +97,7 @@ export default function Navbar() {
 
         {/* MOBILE OVERLAY */}
         <div
-            className={`fixed pt-[78px] inset-0 w-full h-screen bg-[#101010] z-49
+            className={`fixed pt-[78px] inset-0 w-full h-screen bg-[#101010] z-48
             transition-transform duration-500 ease-in-out
             ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}
         >

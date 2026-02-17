@@ -1,15 +1,17 @@
 type ShadowOverlayProps = {
   height?: string;
   top?: string;
+  zIndex?: string;
 };
 
 export function ShadowOverlay({
   height = "80%",
+  zIndex = "z-2",
   top = "0px",
 }: ShadowOverlayProps) {
   return (
     <div
-      className="absolute left-0 w-full pointer-events-none z-[2]"
+      className={`absolute left-0 w-full pointer-events-none ${zIndex}`}
       style={{
         top,
         height,
