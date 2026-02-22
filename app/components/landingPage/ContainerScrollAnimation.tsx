@@ -9,27 +9,38 @@ export const ContainerScroll = ({
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const [isMobile, setIsMobile] = React.useState(false);
+  type Device = "mobile" | "tablet" | "desktop";
+  const [device, setDevice] = React.useState<Device>("desktop");
+
   React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
+    const checkDevice = () => {
+      const width = window.innerWidth;
+      if (width < 768) setDevice("mobile");
+      else if (width < 1024) setDevice("tablet");
+      else setDevice("desktop");
+    };
+    checkDevice();
+    window.addEventListener("resize", checkDevice);
+    return () => window.removeEventListener("resize", checkDevice);
   }, []);
 
-  const scaleDimensions = () => (isMobile ? [0.7, 0.9] : [1.05, 1]);
+  const scaleDimensions = () => {
+    if (device === "mobile") return [0.7, 0.9];
+    if (device === "tablet") return [0.9, 1];
+    return [1.05, 1];
+  };
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "center center"],
   });
 
-  const rotateStart = isMobile ? 60 : 40;
-  const rotateEnd = 0;
+  const rotateStart =
+    device === "mobile" ? 60 : device === "tablet" ? 45 : 40;
 
   const rotateRaw = useTransform(
     scrollYProgress,
-    [0, isMobile ? 1 : 0.75],
+    [0, device === "mobile" ? 1 : device === "tablet" ? 0.85 : 0.75],
     [rotateStart, 0]
   );
 
@@ -78,7 +89,7 @@ export const Card = ({
       className="
         max-w-5xl mx-auto 
         w-full 
-        h-[250px] md:h-[675px]
+        h-[100%]
         p-[0.75px] md:p-[2px] 
         bg-[radial-gradient(98.31%_96.15%_at_99.13%_2.71%,#EEE2FF_0%,#9747FF_9.7%,#322EAE_59.04%,#724EA1_100%)]
         rounded-[46px]

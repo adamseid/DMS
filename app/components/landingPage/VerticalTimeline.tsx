@@ -70,7 +70,7 @@ export function VerticalTimeline({ cards }: VerticalTimelineProps) {
   }, []);
 
   return (
-    <div ref={sectionRef} className="relative flex flex-row gap-[21px] md:gap-[83px]">
+    <div ref={sectionRef} className="relative flex flex-row gap-[21px] md:gap-[83px] w-full">
 
       {/* Timeline line */}
       <div className="relative w-[3px]">

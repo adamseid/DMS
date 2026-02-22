@@ -261,14 +261,14 @@ export default function Home() {
       {/* Section G */}
       <div className="relative">
         {/* Wrapper */}
-        <div className="relative flex flex-col justify-start gap-[42px] md:flex-row md:justify-center items-center md:gap-[123px] bg-transparent z-10 pt-[40px] pb-[40px] md:pt-[52px] md:pb-[52px] max-w-[1440px] mx-auto md:px-15 px-3">
-          <div className="w-full md:max-w-[329px] flex flex-col items-center md:items-start justify-start">
+        <div className="relative flex flex-col justify-start gap-[42px] lg:flex-row lg:justify-center items-center lg:gap-[123px] bg-transparent z-10 pt-[40px] pb-[40px] md:pt-[52px] md:pb-[52px] max-w-[1440px] mx-auto md:px-15 px-3">
+          <div className="w-full lg:max-w-[329px] flex flex-col items-center lg:items-start justify-start">
             {/* Hero Text */}
-            <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[12px] md:pb-[16px]">
+            <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center lg:text-left text-white align-middle pb-[12px] md:pb-[16px]">
               Our Services
             </h2>
 
-            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
+            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center lg:text-left text-brand-cardText pb-[24px]">
               Practical, end-to-end solutions tailored to your business needs.
             </p>
 
