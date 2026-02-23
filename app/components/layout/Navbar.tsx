@@ -101,7 +101,7 @@ export default function Navbar() {
             </button>
             <div className={`flex flex-col overflow-hidden transition-[max-height] duration-300 mt-2 rounded-lg ${servicesOpen ? "max-h-[300px]" : "max-h-0"}`}>
                 <a href="/website-development" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Web Design</a>
-                <a href="/growth-and-marketing-support" className="border-t border-b border-[#2A2A2A] py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Digital Marketing</a>
+                <a href="/growth-and-marketing-support" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Digital Marketing</a>
                 <a href="/branding" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Strategic Consulting</a>
             </div>
           </div>
