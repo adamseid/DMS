@@ -38,20 +38,16 @@ export default function Navbar() {
     
             <div className="md:hidden flex flex-col items-center justify-start gap-[9px] md:flex-row md:justify-between md:gap-[9px]">
                 <div className="flex flex-row items-center justify-between gap-[17]">
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
+                    <a href="/" className="text-white hover:text-brand-highlight transition p-2.5">
                         Home
                     </a>
 
                     <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        Result
+                        About
                     </a>
 
                     <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
                         Services
-                    </a>
-
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        Reviews
                     </a>
                 </div>
 
@@ -70,7 +66,7 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex flex-row items-center justify-between gap-[17]">
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
+                    <a href="/" className="text-white hover:text-brand-highlight transition p-2.5">
                         Home
                     </a>
 
@@ -80,10 +76,6 @@ export default function Navbar() {
 
                     <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
                         Services
-                    </a>
-
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        Reviews
                     </a>
                 </div>
             </div>

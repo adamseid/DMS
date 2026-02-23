@@ -1,18 +1,19 @@
 "use client";
 
 import React from "react";
-import { ContainerScroll } from "../../components/landingPage/ContainerScrollAnimation";
-import { SpotlightCard } from "../../components/landingPage/SpotlightCard";
-import { InteractiveImageAccordion } from "../../components/landingPage/InteractiveImageAccordion";
-import { Sparkles } from "../../components/landingPage/Sparkles";
-import { Carousel } from "../../components/landingPage/Carousel";
-import { VerticalTimeline } from "../../components/landingPage/VerticalTimeline";
-import { ClientCard } from "../../components/landingPage/ClientCard";
-import { PurpleGradientButton } from "../../components/landingPage/PurpleGradientButton";
-import { GridOverlay } from "../../components/landingPage/GridOverlay";
-import { ShadowOverlay } from "../../components/landingPage/ShadowOverlay";
-import { VideoWithOverlay } from "../../components/landingPage/VideoWithOverlay";
+import { ContainerScroll } from "../components/landingPage/ContainerScrollAnimation";
+import { SpotlightCard } from "../components/landingPage/SpotlightCard";
+import { InteractiveImageAccordion } from "../components/landingPage/InteractiveImageAccordion";
+import { Sparkles } from "../components/landingPage/Sparkles";
+import { Carousel } from "../components/landingPage/Carousel";
+import { VerticalTimeline } from "../components/landingPage/VerticalTimeline";
+import { ClientCard } from "../components/landingPage/ClientCard";
+import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
+import { GridOverlay } from "../components/landingPage/GridOverlay";
+import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
+import { VideoWithOverlay } from "../components/landingPage/VideoWithOverlay";
 import { carouselData, timelineData, accordionData } from "./pageData";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -49,23 +50,25 @@ export default function Home() {
             <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="View our work" />
 
             {/* Dark Button */}
-            <div className="z-10">
-              <button className="
-                  min-h-[39px] h-full
-                  flex items-center gap-3 justify-center
-                  shadow-[0_0_14px_0_#8F8F8F4D_inset]
-                  border-[0.5px] border-[#FFFFFF4D]
-                  rounded-xl 
-                  text-white font-semibold
-                  bg-[#101010]
-                  px-[29px] py-[10px]
-                  w-full h-full
-                  cursor-pointer
-                ">
-                Book a Call
-                <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
-              </button>
-            </div>
+            <Link href="/contact-us">
+              <div className="z-10">
+                <button className="
+                    min-h-[39px] h-full
+                    flex items-center gap-3 justify-center
+                    shadow-[0_0_14px_0_#8F8F8F4D_inset]
+                    border-[0.5px] border-[#FFFFFF4D]
+                    rounded-xl 
+                    text-white font-semibold
+                    bg-[#101010]
+                    px-[29px] py-[10px]
+                    w-full h-full
+                    cursor-pointer
+                  ">
+                  Book a Call
+                  <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
+                </button>
+              </div>
+            </Link>
           </div>
 
           {/* ContainerScroll */}
@@ -148,7 +151,9 @@ export default function Home() {
               Our goal is to make the perfect site for your <br className="md:hidden" /> business, well within your deadline.
             </p>
 
-            <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+            <Link href="/contact-us">
+              <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+            </Link>
           </div>
 
           <VerticalTimeline cards={timelineData} />
@@ -269,7 +274,9 @@ export default function Home() {
             </p>
 
             {/* Gradient Button */}
-            <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+            <Link href="/contact-us">
+              <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+            </Link>
           </div>
 
           <InteractiveImageAccordion accordionCards = {accordionData} />
@@ -313,7 +320,9 @@ export default function Home() {
           </p>
           
           {/* Gradient Button */}
-          <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+          <Link href="/contact-us">
+            <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+          </Link>
         </div>
       </div>
     </div>
