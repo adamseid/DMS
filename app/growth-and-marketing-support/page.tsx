@@ -7,7 +7,7 @@ import Testimonials from "../components/landingPage/Testimonials";
 import { faqs, testimonials } from "./pageData";
 import Link from "next/link";
 
-export default function WebsiteDevelopment() {
+export default function GrowthAndMarketing() {
   return (
   <div className="bg-brand-dark">
     <div>

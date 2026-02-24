@@ -2,7 +2,7 @@
 
 import { Sparkles } from "../components/landingPage/Sparkles";
 
-export default function WebsiteDevelopment() {
+export default function ContactUs() {
   return (
   <div className="bg-brand-dark">
     <div>
