@@ -115,7 +115,7 @@ export default function WebsiteDevelopment() {
         </div>
 
         {/* content */}
-        <div className="relative z-10 lg:pt-[197px] pt-[203px] lg:pb-[197px] pb-[40px] max-w-[1440px] mx-auto lg:px-10 px-[28px] gap-[54px] flex flex-row justify-end">
+        <div className="relative z-10 lg:pt-[197px] pt-[150px] lg:pb-[197px] pb-[40px] max-w-[1440px] mx-auto lg:px-10 px-[28px] gap-[54px] flex flex-row justify-end">
           <div className="p-6 lg:px-[40px] lg:py-[51.5px] rounded-[12px] bg-[linear-gradient(180deg,#231535_0%,#101010_100%)] border border-[#FFFFFF26] lg:max-w-[541px] w-full">
             <h2 className="font-segoe font-smibold text-[40px] md:text-[40px] leading-[53px] tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px]">
               DistinctiveMS
@@ -128,43 +128,43 @@ export default function WebsiteDevelopment() {
 
             <div className="flex flex-col items-start justify-start gap-6">
               <div className="flex flex-row items-center justify-start gap-[10px]">
-                <div className="p-[15px] border-[1.13px] border-[#9747FF80] rounded-[12px]">
+                <div className="w-[45px] h-[45px] flex items-center justify-center border-[1.13px] border-[#9747FF80] rounded-[12px]">
                   <img
                     src="/icons/phone.svg"
                     alt="Phone Icon"
-                    className="w-full object-contain max-w-[15px]"
+                    className="object-contain w-[15px] h-[15px]"
                   />
                 </div>
 
-                <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-[#F5F5F5]">
+                <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-[#F5F5F5]">
                   403-852-7408
                 </p>
               </div>
 
               <div className="flex flex-row items-center justify-start gap-[10px]">
-                <div className="p-[15px] border-[1.13px] border-[#9747FF80] rounded-[12px]">
+                <div className="w-[45px] h-[45px] flex items-center justify-center border-[1.13px] border-[#9747FF80] rounded-[12px]">
                   <img
                     src="/icons/mail.svg"
                     alt="Email Icon"
-                    className="w-full object-contain max-w-[15px]"
+                    className="object-contain w-[16px] h-[16px]"
                   />
                 </div>
 
-                <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-[#F5F5F5]">
+                <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-[#F5F5F5]">
                   info@distinctivems.com
                 </p>
               </div>
 
               <div className="flex flex-row items-center justify-start gap-[10px]">
-                <div className="p-[15px] border-[1.13px] border-[#9747FF80] rounded-[12px]">
+                <div className="flex-none w-[45px] h-[45px] flex items-center justify-center border-[1.13px] border-[#9747FF80] rounded-[12px]">
                   <img
                     src="/icons/location.svg"
                     alt="Location Icon"
-                    className="w-full object-contain max-w-[15px]"
+                    className="object-contain w-[20px] h-[20px]"
                   />
                 </div>
 
-                <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-[#F5F5F5]">
+                <p className="flex-1 font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-[#F5F5F5]">
                   4310 104 Ave NE Bldg 2000 2nd floor, #2244, <br className="hidden md:block" />
                   Calgary, AB T3N 1W2, Canada
                 </p>

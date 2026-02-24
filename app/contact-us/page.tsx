@@ -37,7 +37,37 @@ export default function WebsiteDevelopment() {
 
           <div className="flex flex-col items-stretch lg:flex-row lg:items-start lg:justify-start gap-[53px] w-full">
             <div className="flex-[2]">
-              <form className="flex flex-col gap-[15px] w-full max-w-3xl mx-auto">
+              <form
+              className="flex flex-col gap-[15px] w-full max-w-3xl mx-auto"
+              onSubmit={async (e) => {
+                e.preventDefault();
+                window.location.href = "/thank-you";
+                // const form = e.currentTarget;
+                // const data = {
+                //   fullName: (form.fullName as HTMLInputElement).value,
+                //   address: (form.address as HTMLInputElement).value,
+                //   phone: (form.phone as HTMLInputElement).value,
+                //   message: (form.message as HTMLTextAreaElement).value,
+                // };
+
+                // try {
+                //   const res = await fetch("/api/contact", {
+                //     method: "POST",
+                //     headers: { "Content-Type": "application/json" },
+                //     body: JSON.stringify(data),
+                //   });
+
+                //   if (res.ok) {
+                //     window.location.href = "/thank-you"; // redirect on success
+                //   } else {
+                //     alert("Failed to send message.");
+                //   }
+                // } catch (err) {
+                //   console.error(err);
+                //   alert("An error occurred while sending the message.");
+                // }
+              }}
+              >
                 {/* Row 1 */}
                 <div className="flex flex-col md:flex-row gap-6">
                   <div className="flex-1 flex flex-col">
@@ -83,7 +113,7 @@ export default function WebsiteDevelopment() {
 
                       {/* Input */}
                       <input
-                        type="text"
+                        type="email"
                         id="address"
                         required
                         placeholder="Email address"
@@ -108,9 +138,10 @@ export default function WebsiteDevelopment() {
 
                       {/* Input */}
                       <input
-                        type="text"
+                        type="tel"
                         id="phone"
                         required
+                        pattern="[0-9+()-\s]{7,}"
                         placeholder="Phone number"
                         className="p-[14px] pl-10 rounded-[6px] bg-[#181818] font-segoe font-normal text-[14px] leading-[1.5em] text-left text-white focus:outline-none focus:ring-2 focus:ring-purple-500 w-full"
                       />
