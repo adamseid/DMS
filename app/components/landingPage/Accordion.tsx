@@ -35,7 +35,7 @@ export default function Accordion({ items }: AccordionProps) {
           >
             {/* Header */}
             <div
-              className="flex flex-row items-center justify-between w-full cursor-pointer select-none"
+              className="flex flex-row items-center justify-between w-full cursor-pointer select-none gap-4"
               onClick={() => toggleAccordion(index)}
             >
               <h3 className="font-segoe font-semibold text-[14px] leading-[20px] text-left text-white">

@@ -44,14 +44,14 @@ export default function GrowthAndMarketing() {
           <div className="flex-1 md:pt-[75px]">
             {/* Desktop Image */}
             <img
-              src="/images/branding.png"
+              src="/images/growth-and-marketing-support.png"
               alt="Branding Hero Image"
               className="hidden md:block w-full object-contain"
             />
 
             {/* Mobile Image */}
             <img
-              src="/images/branding-mobile.png"
+              src="/images/growth-and-marketing-support-mobile.png"
               alt="Branding Mobile Hero Image"
               className="block md:hidden w-full object-contain"
             />
