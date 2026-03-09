@@ -10,13 +10,13 @@ export default function Navbar() {
         <div className="flex flex-col items-stretch justify-start px-[31px] pt-[66px] pb-[23px] md:px-[33px] md:pt-[88px] md:pb-[6px] gap-8">
             <div className="flex flex-col items-center justify-start md:flex-row md:justify-between gap-[47px] md:gap-[0px]">
                 <div className="w-auto">
-                    <div className="md:p-2.5 w-full">
+                    <a href="/" className="md:p-2.5 w-full">
                         <img
                             src="/images/logo.png"
                             alt="DMS Logo"
                             className="w-full max-w-[159px] md: max-w-[119px] object-contain"
                         />
-                    </div>
+                    </a>
                 </div>
 
                 <div className="flex flex-row items-center justify-between gap-2.5">

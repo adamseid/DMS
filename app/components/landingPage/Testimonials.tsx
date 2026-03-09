@@ -10,7 +10,7 @@ export type TestimonialItem = {
 
 export type TestimonialCarouselProps = {
   items: TestimonialItem[];
-  autoSlideInterval?: number; // optional auto-slide
+  autoSlideInterval?: number;
 };
 
 export default function TestimonialCarousel({
