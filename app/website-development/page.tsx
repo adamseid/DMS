@@ -30,7 +30,7 @@ export default function WebsiteDevelopment() {
           {/* Left */}
           <div className="flex-1">
             <h1 className="font-segoe font-normal text-[56px] md:text-[64px] leading-[56px] md:leading-[64px] tracking-[-1px] text-center md:text-left text-white align-middle pb-[24px]">
-              Website <br /> Development
+              Website <br /> Developmen
             </h1>
 
             <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px] md:pb-[46px]">
