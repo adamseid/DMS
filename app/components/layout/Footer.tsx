@@ -7,7 +7,7 @@ import Link from "next/link";
 export default function Navbar() {
   return (
     <footer className="w-full bg-brand-dark">
-        <div className="flex flex-col items-stretch justify-start px-[31px] pt-[66px] pb-[23px] md:px-[33px] md:pt-[88px] md:pb-[6px] gap-8">
+        <div className="flex flex-col items-stretch justify-start pt-[66px] pb-[23px] md:pt-[88px] md:pb-[6px] max-w-[1440px] mx-auto md:px-10 px-3 gap-8">
             <div className="flex flex-col items-center justify-start md:flex-row md:justify-between gap-[47px] md:gap-[0px]">
                 <div className="w-auto">
                     <a href="/" className="md:p-2.5 w-full">
@@ -20,17 +20,17 @@ export default function Navbar() {
                 </div>
 
                 <div className="flex flex-row items-center justify-between gap-2.5">
-                    <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
+                    <a href="https://www.instagram.com/calgarywebsiteguy/" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
                         <img src="/icons/instagram.svg" alt="Instagram" className="w-full max-w-[16.38px] object-contain" />
                     </a>
 
-                    <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
+                    {/* <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
                         <img src="/icons/facebook.svg" alt="Facebook" className="w-full max-w-[8.4px] object-contain" />
                     </a>
 
                     <a href="#" className="flex flex-row justify-center items-center w-[39px] h-[40px] rounded-[10px] border border-brand-secondary/25 bg-brand-secondary/8 flex-grow-0 flex-shrink">
                         <img src="/icons/linkedin.svg" alt="LinkedIn" className="w-full max-w-[16.38px] object-contain" />
-                    </a>
+                    </a> */}
                 </div>
             </div>
 
@@ -42,12 +42,12 @@ export default function Navbar() {
                         Home
                     </a>
 
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        About
+                    <a href="/website-development" className="text-white hover:text-brand-highlight transition p-2.5">
+                        Web Design
                     </a>
 
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        Services
+                    <a href="/contact-us" className="text-white hover:text-brand-highlight transition p-2.5">
+                        Contact
                     </a>
                 </div>
 
@@ -70,19 +70,19 @@ export default function Navbar() {
                         Home
                     </a>
 
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        Result
+                    <a href="/website-development" className="text-white hover:text-brand-highlight transition p-2.5">
+                        Web Design
                     </a>
 
-                    <a href="#" className="text-white hover:text-brand-highlight transition p-2.5">
-                        Services
+                    <a href="/contact-us" className="text-white hover:text-brand-highlight transition p-2.5">
+                        Contact
                     </a>
                 </div>
             </div>
 
             <div className="text-[#AAAAAA] flex flex-row justify-center md:justify-end items-center gap-4 underline text-[10px] leading-[24px]">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms and Conditions</a>
+                <a href="/privacy -policy">Privacy Policy</a>
+                <a href="/terms-conditions">Terms and Conditions</a>
             </div>
         </div>
     </footer>

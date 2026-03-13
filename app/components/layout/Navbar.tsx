@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="bg-brand-dark fancy-border h-[78px] relative z-49">
-        <div className="flex h-full flex-row items-center justify-between px-[33px]">
+        <div className="flex h-full flex-row items-center justify-between px-[33px] max-w-[1440px] mx-auto px-10">
           {/* LEFT */}
           <div className="w-auto">
             <Link href="/">
@@ -54,9 +54,9 @@ export default function Navbar() {
                   }`}
                 >
                   <div className="rounded-[12px] border-[0.5px] border-white/30 shadow-[0_10px_84.2px_6px_#9747FF40] rounded-lg flex flex-col py-2.5 px-[14px]">
-                    <a href="/website-development" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Web Design</a>
+                    <a href="/website-development" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Website design</a>
+                    <a href="/branding" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Branding</a>
                     <a href="/growth-and-marketing-support" className="border-t border-b border-[#2A2A2A] py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Digital Marketing</a>
-                    <a href="/branding" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Strategic Consulting</a>
                   </div>
                 </div>
               </div>
@@ -85,7 +85,7 @@ export default function Navbar() {
       </nav>
 
       {/* MOBILE OVERLAY */}
-      <div className={`fixed pt-[78px] inset-0 w-full h-screen bg-[#101010] z-48 transition-transform duration-500 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}>
+      <div className={`fixed px-3 pt-[78px] inset-0 w-full h-screen bg-brand-dark z-48 transition-transform duration-500 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="flex flex-col items-center justify-start gap-[17px] pt-[55px]">
           <a href="/landingPage" className="text-white p-2.5 font-segoe font-normal text-[14px]">Home</a>
           <a href="#" className="text-white p-2.5 font-segoe font-normal text-[14px]">About</a>
@@ -100,9 +100,9 @@ export default function Navbar() {
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : "rotate-0"}`} />
             </button>
             <div className={`flex flex-col overflow-hidden transition-[max-height] duration-300 mt-2 rounded-lg ${servicesOpen ? "max-h-[300px]" : "max-h-0"}`}>
-                <a href="/website-development" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Web Design</a>
+                <a href="/website-development" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Website design</a>
+                <a href="/branding" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Branding</a>
                 <a href="/growth-and-marketing-support" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Digital Marketing</a>
-                <a href="/branding" className="py-2.5 hover:bg-[#2A2A2A] text-center text-white font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Strategic Consulting</a>
             </div>
           </div>
 

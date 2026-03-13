@@ -40,14 +40,16 @@ export default function Home() {
         <div className="relative flex flex-col items-center bg-transparent z-10 md:pt-[98px] pt-[71px] md:pb-[0px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
           {/* Hero Text */}
           <h1 className="font-segoe font-normal md:text-[80px] text-[32px] md:leading-[82px] leading-[35px] tracking-[-1px] text-center text-white align-middle md:pb-[50px] pb-[24px]">
-            Custom web development, <br /> done with care.
+            Finally, a web developer <br /> you can trust.
           </h1>
 
           {/* Buttons */}
           <div className="flex md:flex-row md:items-center md:justify-between flex-col justify-start items-stretch gap-4 pb-[38px]">
 
             {/* Gradient Button */}
-            <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="View our work" />
+            <Link href="/website-development">
+              <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="Web Design" />
+            </Link>
 
             {/* Dark Button */}
             <Link href="/contact-us">
@@ -64,7 +66,7 @@ export default function Home() {
                     w-full h-full
                     cursor-pointer
                   ">
-                  Book a Call
+                  Contact Us
                   <img src="/icons/phone.svg" alt="Phone Icon" className="w-3 object-contain" />
                 </button>
               </div>
