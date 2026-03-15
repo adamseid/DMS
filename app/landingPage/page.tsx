@@ -174,7 +174,7 @@ export default function Home() {
             Some of our clients
           </h2>
 
-          <div className="max-w-[1240px] w-full flex flex-wrap gap-x-[11px] gap-y-[13px] md:gap-y-[40px] md:gap-x-[7.68px]">
+          <div className="hidden max-w-[1240px] w-full md:flex md:flex-wrap md:gap-y-[40px] md:gap-x-[7.68px]">
             <ClientCard
               imageSrc="/images/ul.png"
               imageAlt="UL"
@@ -233,6 +233,68 @@ export default function Home() {
               imageSrc="/images/university-of-calgary.png"
               imageAlt="University of Calgary"
               maxWidthClass = "max-w-[72px]"
+            />
+          </div>
+
+          <div className="max-w-[1240px] w-full flex flex-wrap gap-x-[11px] gap-y-[13px] md:gap-y-[40px] md:gap-x-[7.68px] md:hidden">
+            <ClientCard
+              imageSrc="/images/ford.png"
+              imageAlt="Ford"
+              maxWidthClass = "max-w-[100px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/lg.png"
+              imageAlt="LG"
+              maxWidthClass = "max-w-[83px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/fc.png"
+              imageAlt="FC25"
+              maxWidthClass = "max-w-[74px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/mlb.png"
+              imageAlt="MLB"
+              maxWidthClass = "max-w-[72px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/university-of-michigan.png"
+              imageAlt="University of Michigan"
+              maxWidthClass = "max-w-[83px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/university-of-calgary.png"
+              imageAlt="University of Calgary"
+              maxWidthClass = "max-w-[72px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/goldline-resources.png"
+              imageAlt="Goldline Resources"
+              maxWidthClass = "max-w-[50px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/canada.png"
+              imageAlt="Canada"
+              maxWidthClass = "max-w-[100px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/ul.png"
+              imageAlt="UL"
+              maxWidthClass = "max-w-[50px]"
+            />
+
+            <ClientCard
+              imageSrc="/images/alberta-government.png"
+              imageAlt="Alberta Government"
+              maxWidthClass = "max-w-[74px]"
             />
           </div>
         </div>

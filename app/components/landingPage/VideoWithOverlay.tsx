@@ -11,20 +11,22 @@ export const VideoWithOverlay = ({
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
-  // Toggle play/pause
-  const handleToggle = () => {
+  const handleToggle = async () => {
     if (!videoRef.current) return;
 
-    if (videoRef.current.paused) {
-      videoRef.current.play();
-      setIsPlaying(true);
-    } else {
-      videoRef.current.pause();
-      setIsPlaying(false);
+    try {
+      if (videoRef.current.paused) {
+        await videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    } catch (error) {
+      console.error("Video play failed:", error);
     }
   };
 
-  // Reset video when it ends
   const handleEnded = () => {
     if (!videoRef.current) return;
     videoRef.current.currentTime = 0;
@@ -32,23 +34,28 @@ export const VideoWithOverlay = ({
   };
 
   return (
-    <div className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer">
-      {/* Video */}
+    <div
+      className="relative w-full h-full rounded-2xl overflow-hidden cursor-pointer"
+      onClick={isPlaying ? handleToggle : undefined}
+    >
       <video
         ref={videoRef}
         src={src}
         className="w-full h-full object-cover"
         loop={false}
         playsInline
-        onClick={handleToggle}
         onEnded={handleEnded}
       />
 
-      {/* Overlay play button */}
       {!isPlaying && (
-        <div
-          onClick={handleToggle}
-          className="absolute inset-0 flex items-center justify-center bg-black/40"
+        <button
+          type="button"
+          onClick={(e) => {
+            e.stopPropagation();
+            handleToggle();
+          }}
+          className="absolute inset-0 z-10 flex items-center justify-center bg-black/40"
+          aria-label="Play video"
         >
           <img
             src={overlayImage}
@@ -56,7 +63,7 @@ export const VideoWithOverlay = ({
             className="w-20 h-20 md:w-32 md:h-32"
             draggable={false}
           />
-        </div>
+        </button>
       )}
     </div>
   );

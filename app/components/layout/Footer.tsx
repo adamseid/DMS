@@ -52,7 +52,7 @@ export default function Navbar() {
                     </a>
                 </div>
 
-                <div className="text-[#AAAAAA] p-2.5 text-xs leading-[21px]">
+                <div className="text-[#AAAAAA] p-2.5 text-xs leading-[21px] text-center">
                     <span> 
                         ©2026 Distinctive Marketing Solutions All Rights Reserved 
                     </span>
