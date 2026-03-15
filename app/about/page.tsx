@@ -20,7 +20,13 @@ export default function about() {
         />
         {/* Ellipse Shadow Overlay */}
         <ShadowOverlay height="50%" top="0px" zIndex="z-2" />
-        <PurpleShadowOverlay height="30%" top="55%" zIndex="z-2" />
+        <div className="hidden md:block">
+          <PurpleShadowOverlay height="30%" top="55%" zIndex="z-2" />
+        </div>
+
+        <div className="block md:hidden">
+          <PurpleShadowOverlay height="30%" top="40%" zIndex="z-2" />
+        </div>
         <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
         {/* Wrapper */}
         <div className="relative bg-transparent z-10 md:pt-[75px] pt-[56px] md:pb-[0px] pb-[0px] max-w-[843px] mx-auto md:px-10 px-3">
