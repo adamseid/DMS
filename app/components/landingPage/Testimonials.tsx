@@ -131,7 +131,7 @@ export default function TestimonialCarousel({
                   {Array.from({ length: 5 }).map((_, i) => (
                     <img
                       key={i}
-                      src="/images/star.png"
+                      src="/images/testimonial_star.png"
                       alt="Star"
                       className={`w-full object-contain max-w-[18px] ${
                         i < item.numOfStars ? "" : "opacity-30"

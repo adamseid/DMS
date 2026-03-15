@@ -78,7 +78,7 @@ export default function Branding() {
       <div className="relative">
         <div className="relative flex md:flex md:flex-row md:items-start md:justify-between flex-col justify-start items-center gap-8 bg-transparent z-10 md:pt-[134px] pt-[40px] md:pb-[102px] pb-[80px] max-w-[1440px] mx-auto md:px-10 px-3 md:gap-[54px]">
           {/* Left */}
-          <div className="flex-1">
+          <div className="w-1/2">
             <img
               src="/images/testimonials.png"
               alt="Testimonials"
@@ -87,7 +87,7 @@ export default function Branding() {
           </div>
 
           {/* Right */}
-          <div className="flex-1">
+          <div className="w-1/2">
             <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[53px] md:leading-[53px] tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px]">
               Trusted by Growing Teams
             </h2>

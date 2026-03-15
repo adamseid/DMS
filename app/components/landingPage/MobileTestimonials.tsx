@@ -63,7 +63,7 @@ export default function MobileTestimonials({ items }: TestimonialCarouselProps) 
               {Array.from({ length: 5 }).map((_, i) => (
                 <img
                   key={i}
-                  src="/images/star.png"
+                  src="/images/testimonial_star.png"
                   alt="Star"
                   className={`w-full object-contain max-w-[18px] ${
                     i < items[activeIndex].numOfStars ? "" : "opacity-30"
