@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 
 export const VideoWithOverlay = ({
   src = "/videos/homepage_video.mp4",
-  thumbnail = "/images/web-design-hero.jpg",
+  thumbnail = "/images/web-design-hero.png",
   overlayImage = "/images/play-button.png",
 }: {
   src?: string;
