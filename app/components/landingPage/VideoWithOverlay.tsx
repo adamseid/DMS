@@ -11,20 +11,25 @@ export const VideoWithOverlay = ({
   overlayImage?: string;
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
+
   const [isPlaying, setIsPlaying] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
+  const [showThumbnail, setShowThumbnail] = useState(true);
+  const [isStarting, setIsStarting] = useState(false);
 
   const handlePlay = async () => {
-    if (!videoRef.current) return;
+    const video = videoRef.current;
+    if (!video) return;
 
     try {
-      setHasStarted(true);
-      await videoRef.current.play();
-      setIsPlaying(true);
+      setIsStarting(true);
+      await video.play();
+      // do NOT hide the thumbnail here
+      // wait until the video is actually rendering
     } catch (error) {
       console.error("Video play failed:", error);
-      setHasStarted(false);
+      setIsStarting(false);
       setIsPlaying(false);
+      setShowThumbnail(true);
     }
   };
 
@@ -33,12 +38,29 @@ export const VideoWithOverlay = ({
     setIsPlaying(false);
   };
 
+  const handlePlaying = () => {
+    setIsStarting(false);
+    setIsPlaying(true);
+    setShowThumbnail(false);
+  };
+
+  const handleLoadedData = () => {
+    // fallback: first frame is ready
+    if (isStarting) {
+      setShowThumbnail(false);
+    }
+  };
+
   const handleEnded = () => {
-    if (!videoRef.current) return;
-    videoRef.current.pause();
-    videoRef.current.currentTime = 0;
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.pause();
+    video.currentTime = 0;
+
     setIsPlaying(false);
-    setHasStarted(false);
+    setIsStarting(false);
+    setShowThumbnail(true);
   };
 
   return (
@@ -49,12 +71,13 @@ export const VideoWithOverlay = ({
         preload="auto"
         playsInline
         className="block w-full h-full object-cover"
-        onEnded={handleEnded}
+        onLoadedData={handleLoadedData}
+        onPlaying={handlePlaying}
         onPause={() => setIsPlaying(false)}
-        onPlay={() => setIsPlaying(true)}
+        onEnded={handleEnded}
       />
 
-      {!hasStarted && (
+      {showThumbnail && (
         <div className="absolute inset-0 z-10">
           <img
             src={thumbnail}
@@ -62,6 +85,7 @@ export const VideoWithOverlay = ({
             className="w-full h-full object-cover"
             draggable={false}
           />
+
           <button
             type="button"
             onClick={handlePlay}
@@ -82,7 +106,7 @@ export const VideoWithOverlay = ({
         <button
           type="button"
           onClick={handlePause}
-          className="absolute inset-0 z-10"
+          className="absolute inset-0 z-20"
           aria-label="Pause video"
         />
       )}
