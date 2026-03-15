@@ -25,7 +25,7 @@ export default function about() {
         </div>
 
         <div className="block md:hidden">
-          <PurpleShadowOverlay height="30%" top="40%" zIndex="z-2" />
+          <PurpleShadowOverlay height="25%" top="40%" zIndex="z-2" />
         </div>
         <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
         {/* Wrapper */}

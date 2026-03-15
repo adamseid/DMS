@@ -4,7 +4,6 @@ import { Sparkles } from "../components/landingPage/Sparkles";
 import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
 import Accordion from "../components/landingPage/Accordion";
 import Testimonials from "../components/landingPage/webDesign/Testimonials";
-import MobileTestimonials from "../components/landingPage/MobileTestimonials";
 import { GridOverlay } from "../components/landingPage/GridOverlay";
 import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
 import { VerticalTimeline } from "../components/landingPage/VerticalTimeline";
@@ -141,8 +140,9 @@ export default function WebsiteDevelopment() {
 
       {/* Projects Carasual */}
       <div className="relative">
-        {/* Gridline Overlay */}
-        <GridOverlay top="top-[-612px]" height="h-[1097px]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
+        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
 
         {/* Wrapper */}
         <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] md:pt-[94px] pb-[40px] md:pb-[60px] max-w-[1440px] w-full mx-auto md:px-5">
@@ -182,8 +182,9 @@ export default function WebsiteDevelopment() {
 
       {/* Section E */}
       <div className="relative">
-        <GridOverlay top="top-[-20px]" height="h-[1200px]" opacity="opacity-[0.1]" zIndex="z-1" />
-        <ShadowOverlay height="30%" top="10%" zIndex="z-2" />
+        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
+        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
 
         <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-start bg-transparent pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3 z-10">
           <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px] z-10">
@@ -213,6 +214,9 @@ export default function WebsiteDevelopment() {
 
       {/* Contact 2 */}
       <div className="relative">
+        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
+        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
         {/* background image */}
         <div className="absolute top-0 left-0 w-full lg:top-1/2 lg:w-full lg:max-w-[70%] -translate-y-0 lg:-translate-y-1/2 z-1">
           <img

@@ -4,8 +4,9 @@ import { Sparkles } from "../components/landingPage/Sparkles";
 import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
 import Accordion from "../components/landingPage/Accordion";
 import Testimonials from "../components/landingPage/Testimonials";
-import MobileTestimonials from "../components/landingPage/MobileTestimonials";
 import { faqs, testimonials } from "./pageData";
+import { GridOverlay } from "../components/landingPage/GridOverlay";
+import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
 import Link from "next/link";
 
 export default function GrowthAndMarketing() {
@@ -94,18 +95,17 @@ export default function GrowthAndMarketing() {
             <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[32px]">
               See how our clients achieved real business growth through our design, development, and digital strategy expertise.
             </p>
-            <div className="hidden md:block">
-              <Testimonials items={testimonials} />
-            </div>
-            <div className="block md:hidden">
-              <MobileTestimonials items={testimonials} />
-            </div>
+
+            <Testimonials items={testimonials} />
           </div>
         </div>
       </div>
 
       {/* Contact 2 */}
       <div className="relative">
+        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
+        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
         {/* background image */}
         <div className="absolute top-0 left-0 w-full lg:top-1/2 lg:w-full lg:max-w-[70%] -translate-y-0 lg:-translate-y-1/2 z-1">
           <img
