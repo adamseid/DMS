@@ -142,7 +142,7 @@ export default function WebsiteDevelopment() {
       <div className="relative" id="faq">
         <div className="relative flex md:flex md:flex-row md:items-start md:justify-between flex flex-col justify-start items-center gap-8 bg-transparent z-10 md:pt-[98px] pt-[40px] md:pb-[63px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3 gap-[39px]">
           {/* Left */}
-          <div className="flex-1 sticky top-[10px]">
+          <div className="flex-1 md:sticky md:top-[10px]">
             <h6 className="font-segoe font-normal text-[20px] leading-[20px] tracking-[-2px] text-center md:text-left text-white align-middle">
               Common Questions:
             </h6>
