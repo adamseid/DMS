@@ -94,19 +94,15 @@ export default function TestimonialCarousel({
   };
 
   const handlePrev = () => {
-    if (activeIndex > 0) {
-      setDirection("left");
-      setActiveIndex((prev) => prev - 1);
-      startTimer();
-    }
+    setDirection("left");
+    setActiveIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+    startTimer();
   };
 
   const handleNext = () => {
-    if (activeIndex < totalSlides - 1) {
-      setDirection("right");
-      setActiveIndex((prev) => prev + 1);
-      startTimer();
-    }
+    setDirection("right");
+    setActiveIndex((prev) => (prev + 1) % totalSlides);
+    startTimer();
   };
 
   return (
@@ -127,7 +123,8 @@ export default function TestimonialCarousel({
           </h2>
 
           <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText">
-            See how our clients achieved real business growth through our design, development, and digital strategy expertise.
+            See how our clients achieved real business growth through our design,
+            development, and digital strategy expertise.
           </p>
         </div>
 
@@ -135,12 +132,7 @@ export default function TestimonialCarousel({
           <div className="flex flex-row items-center gap-3">
             <button
               onClick={handlePrev}
-              disabled={activeIndex === 0}
-              className={`cursor-pointer rounded-[12px] px-[36px] py-[13px] transition-all duration-500 ease-in-out ${
-                activeIndex === 0
-                  ? "bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D]"
-                  : "bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
-              }`}
+              className="cursor-pointer rounded-[12px] px-[36px] py-[13px] bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D] transition-all duration-500 ease-in-out hover:bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
             >
               <img
                 src="/icons/left-arrow.svg"
@@ -151,12 +143,7 @@ export default function TestimonialCarousel({
 
             <button
               onClick={handleNext}
-              disabled={activeIndex === totalSlides - 1}
-              className={`cursor-pointer rounded-[12px] px-[36px] py-[13px] transition-all duration-500 ease-in-out ${
-                activeIndex === totalSlides - 1
-                  ? "bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D]"
-                  : "bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
-              }`}
+              className="cursor-pointer rounded-[12px] px-[36px] py-[13px] bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D] transition-all duration-500 ease-in-out hover:bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
             >
               <img
                 src="/icons/right-arrow.svg"

@@ -81,7 +81,7 @@ function KswCard({ item }: CardProps) {
             </p>
           )}
 
-          <div className="flex flex-col items-stretch justify-start md:flex-row md:items-center gap-2">
+          <div className="flex flex-col items-stretch justify-start md:flex-row gap-2">
             <div className="px-[16px] py-[24px] bg-[#212121] rounded-[12px] border border-[#FFFFFF14] backdrop-blur-[26px] shadow-[0px_1px_2.9px_0px_#00000066]">
               <img
                 src="/images/ksw-icon-1.png"
@@ -148,35 +148,31 @@ function KswCard({ item }: CardProps) {
 
 export function Carousel({ items = [] }: CarouselProps) {
   const [index, setIndex] = useState(0);
-  const [activeIndex, setActiveIndex] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const touchEndX = useRef<number | null>(null);
+
   if (!items.length) return null;
 
-/* =========================
-     Arrows SUPPORT
+  /* =========================
+     ARROWS SUPPORT
   ========================= */
   const nextSlide = () => {
     setIndex((prev) => (prev + 1) % items.length);
-    setActiveIndex(activeIndex + 1);
   };
 
   const prevSlide = () => {
     setIndex((prev) => (prev - 1 + items.length) % items.length);
-    setActiveIndex(activeIndex - 1);
   };
 
   /* =========================
      SWIPE SUPPORT
   ========================= */
   const handleTouchStart = (e: React.TouchEvent | React.MouseEvent) => {
-    touchStartX.current =
-      "touches" in e ? e.touches[0].clientX : e.clientX;
+    touchStartX.current = "touches" in e ? e.touches[0].clientX : e.clientX;
   };
 
   const handleTouchMove = (e: React.TouchEvent | React.MouseEvent) => {
-    touchEndX.current =
-      "touches" in e ? e.touches[0].clientX : e.clientX;
+    touchEndX.current = "touches" in e ? e.touches[0].clientX : e.clientX;
   };
 
   const handleTouchEnd = () => {
@@ -188,13 +184,11 @@ export function Carousel({ items = [] }: CarouselProps) {
     if (distance > threshold) {
       // swipe left -> next
       setIndex((prev) => (prev + 1) % items.length);
-      setActiveIndex((prev) => (prev + 1) % items.length);
     }
 
     if (distance < -threshold) {
       // swipe right -> prev
       setIndex((prev) => (prev - 1 + items.length) % items.length);
-      setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
     }
 
     touchStartX.current = null;
@@ -234,26 +228,24 @@ export function Carousel({ items = [] }: CarouselProps) {
       <div className="flex flex-row items-center gap-8 pt-9 md:ml-[20px] ml-3">
         <button
           onClick={prevSlide}
-          disabled={activeIndex === 0}
-          className={`cursor-pointer rounded-[12px] px-[15px] py-[13px] transition-all duration-500 ease-in-out ${
-            activeIndex === 0
-              ? "bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D]"
-              : "bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
-          }`}
+          className="cursor-pointer rounded-[12px] px-[15px] py-[13px] bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D] transition-all duration-500 ease-in-out hover:bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
         >
-          <img src="/icons/chevron-left.svg" alt="Left arrow" className="w-[5.88x] object-contain" />
+          <img
+            src="/icons/chevron-left.svg"
+            alt="Left arrow"
+            className="w-[5.88px] object-contain"
+          />
         </button>
 
         <button
           onClick={nextSlide}
-          disabled={activeIndex === items.length - 1}
-          className={`cursor-pointer rounded-[12px] px-[15px] py-[13px] transition-all duration-500 ease-in-out ${
-            activeIndex === items.length - 1
-              ? "bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D]"
-              : "bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
-          }`}
+          className="cursor-pointer rounded-[12px] px-[15px] py-[13px] bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D] transition-all duration-500 ease-in-out hover:bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
         >
-          <img src="/icons/chevron-right.svg" alt="Right arrow" className="w-[5.88x] object-contain" />
+          <img
+            src="/icons/chevron-right.svg"
+            alt="Right arrow"
+            className="w-[5.88px] object-contain"
+          />
         </button>
       </div>
     </div>

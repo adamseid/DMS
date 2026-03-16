@@ -54,7 +54,7 @@ export default function WebsiteDevelopment() {
                 Our team focuses on:
               </p>
 
-              <ul className="list-disc pl-6 text-left md:text-center">
+              <ul className="list-disc pl-6 text-left">
                 <li>
                   clear communication
                 </li>
@@ -78,12 +78,12 @@ export default function WebsiteDevelopment() {
           <div className="flex md:flex-row md:items-center flex-col justify-start items-stretch gap-4 pb-[38px]">
 
               {/* Gradient Button */}
-              <Link href="/">
+              <Link href="#our_process">
                 <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="Our Process" />
               </Link>
 
               {/* Dark Button */}
-              <Link href="/contact-us">
+              <Link href="#faq">
                 <div className="z-10">
                   <div className="
                       min-h-[39px] h-full
@@ -138,28 +138,11 @@ export default function WebsiteDevelopment() {
         </div>
       </div>
 
-      {/* Projects Carasual */}
-      <div className="relative">
-        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
-        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
-        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
-
-        {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] md:pt-[94px] pb-[40px] md:pb-[60px] max-w-[1440px] w-full mx-auto md:px-5">
-          {/* Hero Text */}
-          <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] md:px-5 text-center md:text-left text-white pb-[24px] md:pb-[50px]">
-            Real Projects, Real Results
-          </h2>
-
-          <Carousel items={carouselData} />
-        </div>
-      </div>
-
       {/* FAQ */}
-      <div className="relative">
+      <div className="relative" id="faq">
         <div className="relative flex md:flex md:flex-row md:items-start md:justify-between flex flex-col justify-start items-center gap-8 bg-transparent z-10 md:pt-[98px] pt-[40px] md:pb-[63px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3 gap-[39px]">
           {/* Left */}
-          <div className="flex-1">
+          <div className="flex-1 sticky top-[10px]">
             <h6 className="font-segoe font-normal text-[20px] leading-[20px] tracking-[-2px] text-center md:text-left text-white align-middle">
               Common Questions:
             </h6>
@@ -180,8 +163,25 @@ export default function WebsiteDevelopment() {
         </div>
       </div>
 
-      {/* Section E */}
+      {/* Projects Carasual */}
       <div className="relative">
+        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
+        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
+
+        {/* Wrapper */}
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] md:pt-[94px] pb-[40px] md:pb-[60px] max-w-[1160px] w-full mx-auto md:px-5">
+          {/* Hero Text */}
+          <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] md:px-5 text-center md:text-left text-white pb-[24px] md:pb-[50px]">
+            Real Projects, Real Results
+          </h2>
+
+          <Carousel items={carouselData} />
+        </div>
+      </div>
+
+      {/* Section E */}
+      <div id="our_process" className="relative">
         <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
         <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
         <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
@@ -214,9 +214,6 @@ export default function WebsiteDevelopment() {
 
       {/* Contact 2 */}
       <div className="relative">
-        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.1]" zIndex="z-1" />
-        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
-        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
         {/* background image */}
         <div className="absolute top-0 left-0 w-full lg:top-1/2 lg:w-full lg:max-w-[70%] -translate-y-0 lg:-translate-y-1/2 z-1">
           <img
@@ -239,7 +236,7 @@ export default function WebsiteDevelopment() {
             </p>
 
             <div className="flex flex-col items-start justify-start gap-6">
-              <div className="flex flex-row items-center justify-start gap-[10px]">
+              <a href="tel:4038527408" className="flex flex-row items-center justify-start gap-[10px]">
                 <div className="w-[45px] h-[45px] flex items-center justify-center border-[1.13px] border-[#9747FF80] rounded-[12px]">
                   <img
                     src="/icons/phone.svg"
@@ -251,9 +248,9 @@ export default function WebsiteDevelopment() {
                 <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-[#F5F5F5]">
                   403-852-7408
                 </p>
-              </div>
+              </a>
 
-              <div className="flex flex-row items-center justify-start gap-[10px]">
+              <a href="mailto:info@distinctivems.com" className="flex flex-row items-center justify-start gap-[10px]">
                 <div className="w-[45px] h-[45px] flex items-center justify-center border-[1.13px] border-[#9747FF80] rounded-[12px]">
                   <img
                     src="/icons/mail.svg"
@@ -265,9 +262,9 @@ export default function WebsiteDevelopment() {
                 <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-left text-[#F5F5F5]">
                   info@distinctivems.com
                 </p>
-              </div>
+              </a>
 
-              <div className="flex flex-row items-center justify-start gap-[10px]">
+              <a href="https://www.google.com/maps/search/4310+104+Ave+NE+Bldg+2000+2nd+floor+%232244+Calgary+AB+T3N+1W2+Canada/@51.1151078,-114.01555,12z?entry=ttu&g_ep=EgoyMDI2MDMxMS4wIKXMDSoASAFQAw%3D%3D" className="flex flex-row items-center justify-start gap-[10px]">
                 <div className="flex-none w-[45px] h-[45px] flex items-center justify-center border-[1.13px] border-[#9747FF80] rounded-[12px]">
                   <img
                     src="/icons/location.svg"
@@ -280,7 +277,7 @@ export default function WebsiteDevelopment() {
                   4310 104 Ave NE Bldg 2000 2nd floor, #2244, <br className="hidden md:block" />
                   Calgary, AB T3N 1W2, Canada
                 </p>
-              </div>
+              </a>
 
               <div className="py-[8px] px-[19.5px] w-full rounded-[12px] flex justify-center bg-[linear-gradient(90deg,rgba(151,71,255,0.1)_0%,rgba(210,113,255,0.1)_100%)]">
                 <p className="font-segoe font-normal text-[14px] leading-[24px] tracking-[0px] text-center text-white">

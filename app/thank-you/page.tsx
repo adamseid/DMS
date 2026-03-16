@@ -59,14 +59,6 @@ export default function ThankYou() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch">
             <div className="w-full">
               <TestimonialCard
-                testimonial="Rohit is very respectful and knowledgeable young gentleman. Professional with capital letter with lots of passion. Always available and ready to answer all related questions about website development and ongoing process. Thanks."
-                author="Josh Rainbow"
-                authorImage="/images/josh-rainbow.png"
-                numOfStars={5}
-              />
-            </div>
-            <div className="w-full">
-              <TestimonialCard
                 testimonial="The thorough and caring attention Distinctive Marketing provided our consulting firm has significantly helped us to define our brand in ways we couldn't imagine. Then their marketing strategy, combined with their technology resources and leading-edge support services have enabled us to establish and gain prominence in our niche market. Truly grateful to the whole team!   Michel Berdnikoff, Legal Councel"
                 author="Michel Berdnikoff"
                 authorImage="/images/michel-berdnikoff.png"

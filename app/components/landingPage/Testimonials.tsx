@@ -76,26 +76,22 @@ export default function TestimonialCarousel({
     touchStartX.current = null;
     touchEndX.current = null;
 
-    startTimer(); // reset auto-slide after swipe
+    startTimer();
   };
 
   /* =========================
      HANDLERS
   ========================= */
   const handlePrev = () => {
-    if (activeIndex > 0) {
-      setDirection("left");
-      setActiveIndex(activeIndex - 1);
-      startTimer(); // reset timer
-    }
+    setDirection("left");
+    setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
+    startTimer();
   };
 
   const handleNext = () => {
-    if (activeIndex < items.length - 1) {
-      setDirection("right");
-      setActiveIndex(activeIndex + 1);
-      startTimer(); // reset timer
-    }
+    setDirection("right");
+    setActiveIndex((prev) => (prev + 1) % items.length);
+    startTimer();
   };
 
   return (
@@ -168,26 +164,24 @@ export default function TestimonialCarousel({
         <div className="flex flex-row items-center gap-3">
           <button
             onClick={handlePrev}
-            disabled={activeIndex === 0}
-            className={`cursor-pointer rounded-[12px] px-[15px] py-[13px] transition-all duration-500 ease-in-out ${
-              activeIndex === 0
-                ? "bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D]"
-                : "bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
-            }`}
+            className="cursor-pointer rounded-[12px] px-[15px] py-[13px] bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D] transition-all duration-500 ease-in-out hover:bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
           >
-            <img src="/icons/left-arrow.svg" alt="Left arrow" className="w-5 h-5 object-contain" />
+            <img
+              src="/icons/left-arrow.svg"
+              alt="Left arrow"
+              className="w-5 h-5 object-contain"
+            />
           </button>
 
           <button
             onClick={handleNext}
-            disabled={activeIndex === items.length - 1}
-            className={`cursor-pointer rounded-[12px] px-[15px] py-[13px] transition-all duration-500 ease-in-out ${
-              activeIndex === items.length - 1
-                ? "bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D]"
-                : "bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
-            }`}
+            className="cursor-pointer rounded-[12px] px-[15px] py-[13px] bg-[#101010] shadow-[inset_0_0_14px_0_#8F8F8F4D] transition-all duration-500 ease-in-out hover:bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)]"
           >
-            <img src="/icons/right-arrow.svg" alt="Right arrow" className="w-5 h-5 object-contain" />
+            <img
+              src="/icons/right-arrow.svg"
+              alt="Right arrow"
+              className="w-5 h-5 object-contain"
+            />
           </button>
         </div>
       </div>

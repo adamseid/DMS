@@ -87,7 +87,7 @@ export default function Navbar() {
       {/* MOBILE OVERLAY */}
       <div className={`fixed px-3 pt-[78px] inset-0 w-full h-screen bg-brand-dark z-48 transition-transform duration-500 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="flex flex-col items-center justify-start gap-[17px] pt-[55px]">
-          <a href="/landingPage" className="text-white p-2.5 font-segoe font-normal text-[14px]">Home</a>
+          <a href="/" className="text-white p-2.5 font-segoe font-normal text-[14px]">Home</a>
           <a href="/about" className="text-white p-2.5 font-segoe font-normal text-[14px]">About</a>
 
           {/* Mobile Services Dropdown */}

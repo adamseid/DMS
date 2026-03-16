@@ -34,12 +34,6 @@ export const testimonials = [
     numOfStars: 5,
   },
   {
-    testimonial: "Rohit is very respectful and knowledgeable young gentleman. Professional with capital letter with lots of passion. Always available and ready to answer all related questions about website development and ongoing process. Thanks.",
-    author: "Josh Rainbow",
-    numOfStars: 5,
-  },
-
-  {
     testimonial: "I've had the opportunity to work with Distinctive Marketing for numerous projects and have had an amazing experience. They are extremely professional and their SEO and lead gen tactics have steadily increased our sales. Would definitely recommend!",
     author: "A Dhillon",
     numOfStars: 5,

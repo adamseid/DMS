@@ -82,8 +82,21 @@ export default function Navbar() {
             </div>
 
             <div className="text-[#AAAAAA] flex flex-row justify-center md:justify-end items-center gap-4 underline text-[10px] leading-[24px]">
-                <a href="/privacy -policy">Privacy Policy</a>
-                <a href="/terms-conditions">Terms and Conditions</a>
+                <a
+                    href="/pdf/privacy-policy.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Privacy Policy
+                </a>
+
+                <a
+                    href="/pdf/terms-conditions.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Terms and Conditions
+                </a>
             </div>
         </div>
     </footer>

@@ -80,95 +80,13 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Section C */}
-      <div className="relative">
-        {/* Gridline Overlay */}
-        <GridOverlay top="top-[-612px]" height="h-[1097px]" opacity="opacity-[0.1]" zIndex="z-1" />
-        {/* Ellipse Shadow Overlay */}
-        <ShadowOverlay height="30%" top="90%" zIndex="z-2" />
-
-        {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1440px] mx-auto md:px-10">
-          {/* Hero Text */}
-          <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
-            Client Work
-          </h2>
-
-          <Carousel items={carouselData} />
-        </div>
-      </div>
-
-      {/* Section D */}
-      <div className="relative">
-        {/* Gridline Overlay */}
-        <GridOverlay top="top-[-20px]" height="h-[775px]" opacity="opacity-[0.1]" zIndex="z-1" />
-
-        {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto md:px-10 px-3">
-          {/* Hero Text */}
-          <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
-            Why Choose Us?
-          </h2>
-
-          <div className="flex flex-col justify-start items-center md:flex-row gap-6 md:items-stretch md:justify-center">
-            <SpotlightCard 
-              spotlightColor="rgba(151, 71, 255, 0.2)" 
-              image="/images/super-communicative.png" 
-              imageAlt="Super Communicative" 
-              header="Super Communicative" 
-              paragraph="You can find us via email, phone calls, text messages, WhatsApp, whenever! You will never get a radio silence from us." 
-            />
-
-            <SpotlightCard 
-              spotlightColor="rgba(151, 71, 255, 0.2)" 
-              image="/images/transparent-pricing.png" 
-              imageAlt="Transparent Pricing" 
-              header="Transparent Pricing" 
-              paragraph="We provide clear, upfront pricing so you always know what you're paying for, with no hidden surprises." 
-            />
-
-            <SpotlightCard 
-              spotlightColor="rgba(151, 71, 255, 0.2)" 
-              image="/images/forward-looking.png" 
-              imageAlt="Forward Looking" 
-              header="Forward Looking" 
-              paragraph="We provide forward-looking strategies to ensure you stay ahead, leveraging future trends for sustained growth and success." 
-            />
-          </div>
-        </div>
-      </div>
-
-      {/* Section E */}
-      <div className="relative">
-        <GridOverlay top="top-[-20px]" height="h-[1200px]" opacity="opacity-[0.1]" zIndex="z-1" />
-        <ShadowOverlay height="30%" top="10%" zIndex="z-2" />
-
-        <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-start bg-transparent pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3 z-10">
-          <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px] z-10">
-            <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px]">
-              Our process for designing <br /> your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9747FF] to-[#EBAFFF]">perfect</span> website.
-            </h2>
-
-            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
-              Our goal is to make the perfect site for your <br className="md:hidden" /> business, well within your deadline.
-            </p>
-
-            <Link href="/contact-us">
-              <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
-            </Link>
-          </div>
-
-          <VerticalTimeline cards={timelineData} />
-        </div>
-      </div>
-
       {/* Section F */}
       <div className="relative">
         {/* Ellipse Shadow Overlay */}
         <ShadowOverlay height="100%" top="0%" zIndex="z-2" />
 
         {/* Wrapper */}
-        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] md:pt-[105px] pb-[0px] max-w-[1440px] mx-auto md:px-10 px-3">
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] md:pt-[105px] pb-[40px] max-w-[1440px] mx-auto md:px-10 px-3">
           {/* Hero Text */}
           <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px] md:pb-[61px]">
             Some of our clients
@@ -297,6 +215,88 @@ export default function Home() {
               maxWidthClass = "max-w-[74px]"
             />
           </div>
+        </div>
+      </div>
+
+      {/* Section C */}
+      <div className="relative">
+        {/* Gridline Overlay */}
+        <GridOverlay top="top-[-612px]" height="h-[1097px]" opacity="opacity-[0.1]" zIndex="z-1" />
+        {/* Ellipse Shadow Overlay */}
+        <ShadowOverlay height="30%" top="90%" zIndex="z-2" />
+
+        {/* Wrapper */}
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1160px] mx-auto md:px-10">
+          {/* Hero Text */}
+          <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
+            Client Work
+          </h2>
+
+          <Carousel items={carouselData} />
+        </div>
+      </div>
+
+      {/* Section D */}
+      <div className="relative">
+        {/* Gridline Overlay */}
+        <GridOverlay top="top-[-20px]" height="h-[775px]" opacity="opacity-[0.1]" zIndex="z-1" />
+
+        {/* Wrapper */}
+        <div className="relative flex flex-col items-center bg-transparent z-10 pt-[40px] pb-[40px] md:pt-[98px] md:pb-[98px] max-w-[1440px] mx-auto md:px-10 px-3">
+          {/* Hero Text */}
+          <h2 className="font-segoe font-normal text-[32px] md:text-[64px] leading-[35px] md:leading-[109px] tracking-[-1px] md:tracking-[-2px] text-center text-white align-middle pb-[50px]">
+            Why Choose Us?
+          </h2>
+
+          <div className="flex flex-col justify-start items-center md:flex-row gap-6 md:items-stretch md:justify-center">
+            <SpotlightCard 
+              spotlightColor="rgba(151, 71, 255, 0.2)" 
+              image="/images/super-communicative.png" 
+              imageAlt="Super Communicative" 
+              header="Super Communicative" 
+              paragraph="You can find us via email, phone calls, text messages, WhatsApp, whenever! You will never get a radio silence from us." 
+            />
+
+            <SpotlightCard 
+              spotlightColor="rgba(151, 71, 255, 0.2)" 
+              image="/images/transparent-pricing.png" 
+              imageAlt="Transparent Pricing" 
+              header="Transparent Pricing" 
+              paragraph="We provide clear, upfront pricing so you always know what you're paying for, with no hidden surprises." 
+            />
+
+            <SpotlightCard 
+              spotlightColor="rgba(151, 71, 255, 0.2)" 
+              image="/images/forward-looking.png" 
+              imageAlt="Forward Looking" 
+              header="Forward Looking" 
+              paragraph="We provide forward-looking strategies to ensure you stay ahead, leveraging future trends for sustained growth and success." 
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Section E */}
+      <div className="relative">
+        <GridOverlay top="top-[-20px]" height="h-[1200px]" opacity="opacity-[0.1]" zIndex="z-1" />
+        <ShadowOverlay height="30%" top="10%" zIndex="z-2" />
+
+        <div className="relative flex flex-col items-center justify-start md:flex-row gap-[30px] md:gap-[114px] md:justify-center md:items-start bg-transparent pt-[40px] pb-[40px] md:pt-[84px] md:pb-[49px] max-w-[1440px] mx-auto md:px-10 px-3 z-10">
+          <div className="w-full md:max-w-[501px] flex flex-col items-center md:items-start md:justify-start md:sticky md:top-[10px] z-10">
+            <h2 className="font-segoe font-normal text-[32px] md:text-[48px] leading-[35px] md:leading-[56px] tracking-[-1px] md:tracking-[-2px] text-center md:text-left text-white align-middle pb-[16px]">
+              Our process for designing <br /> your <span className="italic text-transparent bg-clip-text bg-gradient-to-r from-[#9747FF] to-[#EBAFFF]">perfect</span> website.
+            </h2>
+
+            <p className="font-segoe font-normal text-[16px] leading-[24px] tracking-[0px] text-center md:text-left text-brand-cardText pb-[24px]">
+              Our goal is to make the perfect site for your <br className="md:hidden" /> business, well within your deadline.
+            </p>
+
+            <Link href="/contact-us">
+              <PurpleGradientButton maxWidthClass="152px" imageSrc="/icons/phone.svg" imageAlt="Phone Icon" text="Book a Call" />
+            </Link>
+          </div>
+
+          <VerticalTimeline cards={timelineData} />
         </div>
       </div>
 
