@@ -220,9 +220,9 @@ export default function Home() {
 
       {/* Section C */}
       <div className="relative">
-        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.2]" zIndex="z-1" />
-        <ShadowOverlay height="10%" top="10%" zIndex="z-2" />
-        <ShadowOverlay height="10%" top="80%" zIndex="z-2" />
+        <GridOverlay top="top-[0px]" height="h-[100%]" opacity="opacity-[0.3]" zIndex="z-1" />
+        <ShadowOverlay height="10%" top="0%" zIndex="z-2" />
+        <ShadowOverlay height="15%" top="90%" zIndex="z-2" />
 
         {/* Wrapper */}
         <div className="relative flex flex-col items-center bg-transparent z-10 pt-[0px] md:pt-[47px] pb-[40px] md:pb-[58px] max-w-[1160px] mx-auto md:px-10">
