@@ -172,7 +172,7 @@ export default function ContactUs() {
                 </div>
 
                 {/* Submit Button */}
-                <div className="rounded-[12px] p-[1.5px] bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)] inline-block">
+                <div className="rounded-[12px] p-[1.5px] bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)] inline-block cursor-pointer">
                   <button
                     type="submit"
                     className="w-full rounded-[12px] bg-[radial-gradient(102.5%_350.82%_at_0%_81.25%,#AA5BFF_0%,#9747FF_52.42%,#7C0EDD_100%)] 
