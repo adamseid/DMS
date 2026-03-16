@@ -23,8 +23,6 @@ export const VideoWithOverlay = ({
     try {
       setIsStarting(true);
       await video.play();
-      // do NOT hide the thumbnail here
-      // wait until the video is actually rendering
     } catch (error) {
       console.error("Video play failed:", error);
       setIsStarting(false);
@@ -34,8 +32,12 @@ export const VideoWithOverlay = ({
   };
 
   const handlePause = () => {
-    videoRef.current?.pause();
+    const video = videoRef.current;
+    if (!video) return;
+
+    video.pause();
     setIsPlaying(false);
+    setIsStarting(false);
   };
 
   const handlePlaying = () => {
@@ -45,7 +47,6 @@ export const VideoWithOverlay = ({
   };
 
   const handleLoadedData = () => {
-    // fallback: first frame is ready
     if (isStarting) {
       setShowThumbnail(false);
     }
@@ -77,6 +78,7 @@ export const VideoWithOverlay = ({
         onEnded={handleEnded}
       />
 
+      {/* Thumbnail only before first play */}
       {showThumbnail && (
         <div className="absolute inset-0 z-10">
           <img
@@ -85,23 +87,27 @@ export const VideoWithOverlay = ({
             className="w-full h-full object-cover"
             draggable={false}
           />
-
-          <button
-            type="button"
-            onClick={handlePlay}
-            className="absolute inset-0 flex items-center justify-center bg-black/40"
-            aria-label="Play video"
-          >
-            <img
-              src={overlayImage}
-              alt="Play video"
-              className="w-20 h-20 md:w-32 md:h-32"
-              draggable={false}
-            />
-          </button>
         </div>
       )}
 
+      {/* Play overlay when video is not playing */}
+      {!isPlaying && (
+        <button
+          type="button"
+          onClick={handlePlay}
+          className="absolute inset-0 z-20 flex items-center justify-center bg-black/40"
+          aria-label="Play video"
+        >
+          <img
+            src={overlayImage}
+            alt="Play video"
+            className="w-20 h-20 md:w-32 md:h-32"
+            draggable={false}
+          />
+        </button>
+      )}
+
+      {/* Pause overlay when video is playing */}
       {isPlaying && (
         <button
           type="button"

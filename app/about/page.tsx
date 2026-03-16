@@ -16,7 +16,7 @@ export default function about() {
         <img
           src="/images/web-design-hero.png"
           alt="Branding Hero Image"
-          className="w-full object-contain pb-[56px] md:pb-[75px] z-10 relative"
+          className="w-full md:h-[50vh] object-cover object-[center_20%] z-10 relative"
         />
         {/* Ellipse Shadow Overlay */}
         <ShadowOverlay height="50%" top="0px" zIndex="z-2" />
