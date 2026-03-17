@@ -89,7 +89,7 @@ function KswCard({ item }: CardProps) {
                 className={`w-full max-w-[36.15px] object-cover pb-6`}
               />
 
-              <p className="pb-[10px] font-segoe font-semibold text-[38.1px] leading-[35.72px] tracking-[-0.79px] text-left text-white">
+              <p className="pb-[10px] font-segoe font-semibold text-[20px] leading-[20px] lg:text-[38.1px] lg:leading-[35.72px] tracking-[-0.79px] text-left text-white">
                 10.3x
               </p>
 
@@ -105,7 +105,7 @@ function KswCard({ item }: CardProps) {
                 className={`w-full max-w-[36.15px] object-cover pb-6`}
               />
 
-              <p className="pb-[10px] font-segoe font-semibold text-[38.1px] leading-[35.72px] tracking-[-0.79px] text-left text-white">
+              <p className="pb-[10px] font-segoe font-semibold text-[20px] leading-[20px] lg:text-[38.1px] lg:leading-[35.72px] tracking-[-0.79px] text-left text-white">
                 +301%
               </p>
 
@@ -121,7 +121,7 @@ function KswCard({ item }: CardProps) {
                 className={`w-full max-w-[36.15px] object-cover pb-6`}
               />
 
-              <p className="pb-[10px] font-segoe font-semibold text-[38.1px] leading-[35.72px] tracking-[-0.79px] text-left text-white">
+              <p className="pb-[10px] font-segoe font-semibold text-[20px] leading-[20px] lg:text-[38.1px] lg:leading-[35.72px] tracking-[-0.79px] text-left text-white">
                 +43%
               </p>
 
@@ -133,11 +133,11 @@ function KswCard({ item }: CardProps) {
         </div>
 
         {item.image && (
-          <div className="w-full md:w-1/2 flex justify-end">
+          <div className="w-full md:w-1/2 flex lg:justify-end flex-col justify-start">
             <img
               src={item.image}
               alt="KSW case"
-              className="rounded-[12px] object-contain md:h-[379px]"
+              className="rounded-[12px] lg:object-cover object-contain lg:h-[379px]"
             />
           </div>
         )}
