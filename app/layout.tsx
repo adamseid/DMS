@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -16,9 +17,10 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Distinctive Marketing Solutions | Calgary Website Designer",
-  description: "Distinctive Marketing Solutions is a full-service marketing agency specializing in innovative strategies and creative solutions to help businesses stand out in the digital landscape.",
+  description:
+    "Distinctive Marketing Solutions is a full-service marketing agency specializing in innovative strategies and creative solutions to help businesses stand out in the digital landscape.",
   icons: {
-    icon: "/favicon/favicon-3.png", 
+    icon: "/favicon/favicon-3.png",
   },
 };
 
@@ -29,14 +31,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <Navbar />
-
-        <main> {children} </main>
-
+        <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
