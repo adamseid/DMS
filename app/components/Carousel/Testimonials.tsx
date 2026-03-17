@@ -13,7 +13,7 @@ export type TestimonialCarouselProps = {
   autoSlideInterval?: number;
 };
 
-export default function TestimonialCarousel({
+export default function Testimonials({
   items,
   autoSlideInterval = 10000,
 }: TestimonialCarouselProps) {
@@ -56,19 +56,19 @@ export default function TestimonialCarousel({
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX.current === null || touchEndX.current === null) return;
+    if (touchStartX.current === null || touchEndX.current === null) {
+      touchStartX.current = null;
+      touchEndX.current = null;
+      return;
+    }
 
     const distance = touchStartX.current - touchEndX.current;
     const threshold = 50;
 
     if (distance > threshold) {
-      // swipe left -> next
       setDirection("right");
       setActiveIndex((prev) => (prev + 1) % items.length);
-    }
-
-    if (distance < -threshold) {
-      // swipe right -> prev
+    } else if (distance < -threshold) {
       setDirection("left");
       setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
     }
@@ -100,10 +100,6 @@ export default function TestimonialCarousel({
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      onMouseDown={handleTouchStart}
-      onMouseMove={(e) => touchStartX.current !== null && handleTouchMove(e)}
-      onMouseUp={handleTouchEnd}
-      onMouseLeave={handleTouchEnd}
     >
       {/* SLIDE TRACK */}
       <div

@@ -1,6 +1,6 @@
 "use client";
 
-import { Sparkles } from "../components/landingPage/Sparkles";
+import { Sparkles } from "../components/imported/Sparkles";
 
 export default function ContactUs() {
   return (
@@ -82,7 +82,7 @@ export default function ContactUs() {
                       {/* Left icon */}
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                         {/* Replace this with your actual SVG or imported component */}
-                        <img src="/icons/person.svg" alt="User Icon" className="w-[14px] h-[14px]" />
+                        <img src="/icons/person.svg" alt="Form User Icon" className="w-[14px] h-[14px]" />
                       </span>
 
                       {/* Input */}
@@ -108,7 +108,7 @@ export default function ContactUs() {
                       {/* Left icon */}
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                         {/* Replace this with your actual SVG or imported component */}
-                        <img src="/icons/gray-mail.svg" alt="Gray Mail Icon" className="w-[14px] h-[14px]" />
+                        <img src="/icons/gray-mail.svg" alt="Form Mail Icon" className="w-[14px] h-[14px]" />
                       </span>
 
                       {/* Input */}
@@ -133,7 +133,7 @@ export default function ContactUs() {
                       {/* Left icon */}
                       <span className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400">
                         {/* Replace this with your actual SVG or imported component */}
-                        <img src="/icons/gray-phone.svg" alt="Gray Mail Icon" className="w-[14px] h-[14px]" />
+                        <img src="/icons/gray-phone.svg" alt="Form Phone Icon" className="w-[14px] h-[14px]" />
                       </span>
 
                       {/* Input */}
@@ -157,7 +157,7 @@ export default function ContactUs() {
                       {/* Left icon */}
                       <span className="absolute left-3 top-1/5 -translate-y-1/2 text-gray-400">
                         {/* Replace this with your actual SVG or imported component */}
-                        <img src="/icons/message.svg" alt="Gray Mail Icon" className="w-[14px] h-[14px]" />
+                        <img src="/icons/message.svg" alt="Form Long Message Icon" className="w-[14px] h-[14px]" />
                       </span>
 
                       {/* Text Area */}

@@ -13,7 +13,7 @@ export type TestimonialCarouselProps = {
   autoSlideInterval?: number;
 };
 
-export default function TestimonialCarousel({
+export default function TestimonialsV2({
   items,
   autoSlideInterval = 10000,
 }: TestimonialCarouselProps) {
@@ -73,23 +73,26 @@ export default function TestimonialCarousel({
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX.current === null || touchEndX.current === null) return;
+    if (touchStartX.current === null || touchEndX.current === null) {
+      touchStartX.current = null;
+      touchEndX.current = null;
+      return;
+    }
 
     const distance = touchStartX.current - touchEndX.current;
     const threshold = 50;
 
     if (distance > threshold) {
       setDirection("right");
-      setActiveIndex((prev) => (prev + 1) % totalSlides);
-    }
-
-    if (distance < -threshold) {
+      setActiveIndex((prev) => (prev + 1) % items.length);
+    } else if (distance < -threshold) {
       setDirection("left");
-      setActiveIndex((prev) => (prev - 1 + totalSlides) % totalSlides);
+      setActiveIndex((prev) => (prev - 1 + items.length) % items.length);
     }
 
     touchStartX.current = null;
     touchEndX.current = null;
+
     startTimer();
   };
 
@@ -111,10 +114,6 @@ export default function TestimonialCarousel({
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      onMouseDown={handleTouchStart}
-      onMouseMove={(e) => touchStartX.current !== null && handleTouchMove(e)}
-      onMouseUp={handleTouchEnd}
-      onMouseLeave={handleTouchEnd}
     >
       <div className="flex flex-col justify-start items-stretch w-full md:flex-row md:items-center md:justify-between gap-4">
         <div className="w-full md:w-1/2 flex flex-col items-start justify-start">

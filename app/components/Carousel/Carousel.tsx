@@ -55,7 +55,7 @@ function DefaultCard({ item }: CardProps) {
         <div className="md:w-[70%] w-full flex justify-end">
           <img
             src={item.image}
-            alt="case"
+            alt="Project Case"
             className="object-cover object-contain md:h-[475px]"
           />
         </div>
@@ -85,7 +85,7 @@ function KswCard({ item }: CardProps) {
             <div className="px-[16px] py-[24px] bg-[#212121] rounded-[12px] border border-[#FFFFFF14] backdrop-blur-[26px] shadow-[0px_1px_2.9px_0px_#00000066]">
               <img
                 src="/images/ksw-icon-1.png"
-                alt="logo"
+                alt="KSW Icon 1"
                 className={`w-full max-w-[36.15px] object-cover pb-6`}
               />
 
@@ -101,7 +101,7 @@ function KswCard({ item }: CardProps) {
             <div className="px-[16px] py-[24px] bg-[#212121] rounded-[12px] border border-[#FFFFFF14] backdrop-blur-[26px] shadow-[0px_1px_2.9px_0px_#00000066]">
               <img
                 src="/images/ksw-icon-2.png"
-                alt="logo"
+                alt="KSW Icon 2"
                 className={`w-full max-w-[36.15px] object-cover pb-6`}
               />
 
@@ -117,7 +117,7 @@ function KswCard({ item }: CardProps) {
             <div className="px-[16px] py-[24px] bg-[#212121] rounded-[12px] border border-[#FFFFFF14] backdrop-blur-[26px] shadow-[0px_1px_2.9px_0px_#00000066]">
               <img
                 src="/images/ksw-icon-3.png"
-                alt="logo"
+                alt="KSW Icon 3"
                 className={`w-full max-w-[36.15px] object-cover pb-6`}
               />
 
@@ -176,18 +176,18 @@ export function Carousel({ items = [] }: CarouselProps) {
   };
 
   const handleTouchEnd = () => {
-    if (touchStartX.current === null || touchEndX.current === null) return;
+    if (touchStartX.current === null || touchEndX.current === null) {
+      touchStartX.current = null;
+      touchEndX.current = null;
+      return;
+    }
 
     const distance = touchStartX.current - touchEndX.current;
     const threshold = 50;
 
     if (distance > threshold) {
-      // swipe left -> next
       setIndex((prev) => (prev + 1) % items.length);
-    }
-
-    if (distance < -threshold) {
-      // swipe right -> prev
+    } else if (distance < -threshold) {
       setIndex((prev) => (prev - 1 + items.length) % items.length);
     }
 
@@ -203,10 +203,6 @@ export function Carousel({ items = [] }: CarouselProps) {
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
-      onMouseDown={handleTouchStart}
-      onMouseMove={(e) => touchStartX.current !== null && handleTouchMove(e)}
-      onMouseUp={handleTouchEnd}
-      onMouseLeave={handleTouchEnd}
     >
       {/* SLIDE TRACK */}
       <div

@@ -1,10 +1,6 @@
 "use client";
 
-import Link from "next/link";
-
-
-
-export default function Navbar() {
+export default function Footer() {
   return (
     <footer className="w-full bg-brand-dark">
         <div className="flex flex-col items-stretch justify-start pt-[66px] pb-[23px] md:pt-[88px] md:pb-[6px] max-w-[1440px] mx-auto md:px-10 px-3 gap-8">

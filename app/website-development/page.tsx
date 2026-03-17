@@ -1,13 +1,13 @@
 "use client";
 
-import { Sparkles } from "../components/landingPage/Sparkles";
-import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
-import Accordion from "../components/landingPage/Accordion";
-import Testimonials from "../components/landingPage/webDesign/Testimonials";
-import { GridOverlay } from "../components/landingPage/GridOverlay";
-import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
-import { VerticalTimeline } from "../components/landingPage/VerticalTimeline";
-import { Carousel } from "../components/landingPage/Carousel";
+import { Sparkles } from "../components/imported/Sparkles";
+import { PurpleGradientButton } from "../components/imported/PurpleGradientButton";
+import Accordion from "../components/Accordion/Accordion";
+import TestimonialsV2 from "../components/Carousel/TestimonialsV2";
+import { GridOverlay } from "../components/Overlay/GridOverlay";
+import { ShadowOverlay } from "../components/Overlay/ShadowOverlay";
+import { VerticalTimeline } from "../components/imported/VerticalTimeline";
+import { Carousel } from "../components/Carousel/Carousel";
 
 import { faqs, testimonials, carouselData, timelineData } from "./pageData";
 import Link from "next/link";
@@ -79,7 +79,7 @@ export default function WebsiteDevelopment() {
 
               {/* Gradient Button */}
               <Link href="#our_process">
-                <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="Our Process" />
+                <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="North East Arrow" text="Our Process" />
               </Link>
 
               {/* Dark Button */}
@@ -117,7 +117,7 @@ export default function WebsiteDevelopment() {
             {/* Mobile Image */}
             <img
               src="/images/website-development-mobile.png"
-              alt="Website Development Hero Image"
+              alt="Website Development Mobile Hero Image"
               className="block md:hidden w-full object-contain"
             />
           </div>
@@ -125,7 +125,7 @@ export default function WebsiteDevelopment() {
       </div>
 
       {/* Contact */}
-      <div className="relative bg-[url('/images/contact-background.png')] bg-cover bg-center bg-no-repeat">
+      <div className="relative bg-[url('/images/contact-us-background.png')] bg-cover bg-center bg-no-repeat">
         <div className="relative flex flex-col items-center justify-start z-10 md:pt-[84px] pt-[40px] md:pb-[97px] pb-[40px] max-w-[1440px] mx-auto md:px-10 px-3">
           <h2 className="font-segoe font-normal text-[48px] md:text-[64px] leading-[52px] md:leading-[64px] tracking-[-1px] text-center md:text-left text-white align-middle pb-[32px]">
             Get in touch <br className="block md:hidden" /> with us
@@ -208,7 +208,7 @@ export default function WebsiteDevelopment() {
       {/* Testimonials */}
       <div className="relative">
         <div className="relative flex md:flex md:flex-row md:items-start md:justify-between flex-col justify-start items-center gap-8 bg-transparent z-10 md:pt-[134px] pt-[40px] md:pb-[102px] pb-[80px] max-w-[1440px] mx-auto md:px-10 px-3 md:gap-[54px]">
-          <Testimonials items={testimonials} />
+          <TestimonialsV2 items={testimonials} />
         </div>
       </div>
 
@@ -217,8 +217,8 @@ export default function WebsiteDevelopment() {
         {/* background image */}
         <div className="absolute top-0 left-0 w-full lg:top-1/2 lg:w-full lg:max-w-[70%] -translate-y-0 lg:-translate-y-1/2 z-1">
           <img
-            src="/images/service-hours.png"
-            alt="Website Development Hero Image"
+            src="/images/call-to-action.png"
+            alt="Call to Action"
             className="w-full object-contain"
           />
         </div>

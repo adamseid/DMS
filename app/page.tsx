@@ -1,7 +1,7 @@
 "use client";
-import { SpiralAnimation } from "./components/landingPage/SpiralAnimation"
+import { SpiralAnimation } from "./components/imported/SpiralAnimation"
 import { useState, useEffect } from 'react'
-import Home from "./landingPage/page";
+import Home from "./home/page";
 
 const Page = () => {
   const [showHome, setShowHome] = useState(false);

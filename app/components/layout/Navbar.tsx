@@ -34,14 +34,14 @@ export default function Navbar() {
           <div className="hidden md:flex flex-row items-center justify-end gap-8 relative">
             {/* Links */}
             <div className="flex flex-row items-center gap-[17px] relative">
-              <a href="/" className="text-white p-2.5 font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">Home</a>
-              <a href="/about" className="text-white p-2.5 font-segoe font-normal text-[14px] leading-[100%] tracking-[0px]">About</a>
+              <a href="/" className="text-white p-2.5 font-segoe font-normal text-[14px] leading-[100%] tracking-[0px] hover:text-brand-highlight transition">Home</a>
+              <a href="/about" className="text-white p-2.5 font-segoe font-normal text-[14px] leading-[100%] tracking-[0px] hover:text-brand-highlight transition">About</a>
 
               {/* Services Mega Menu */}
               <div className="relative">
                 <button
                   onClick={() => setServicesOpen(prev => !prev)}
-                  className="cursor-pointer flex items-center gap-1 text-white p-2.5 font-segoe font-normal text-[14px] leading-[100%]"
+                  className="cursor-pointer flex items-center gap-1 text-white p-2.5 font-segoe font-normal text-[14px] leading-[100%] hover:text-brand-highlight transition"
                 >
                   Services
                   <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : "rotate-0"}`} />
@@ -87,14 +87,14 @@ export default function Navbar() {
       {/* MOBILE OVERLAY */}
       <div className={`fixed px-3 pt-[78px] inset-0 w-full h-screen bg-brand-dark z-48 transition-transform duration-500 ease-in-out ${menuOpen ? "translate-y-0" : "-translate-y-full"}`}>
         <div className="flex flex-col items-center justify-start gap-[17px] pt-[55px]">
-          <a href="/" className="text-white p-2.5 font-segoe font-normal text-[14px]">Home</a>
-          <a href="/about" className="text-white p-2.5 font-segoe font-normal text-[14px]">About</a>
+          <a href="/" className="text-white p-2.5 font-segoe font-normal text-[14px] hover:text-brand-highlight transition">Home</a>
+          <a href="/about" className="text-white p-2.5 font-segoe font-normal text-[14px] hover:text-brand-highlight transition">About</a>
 
           {/* Mobile Services Dropdown */}
           <div className="flex flex-col w-full relative max-w-[310px]">
             <button
               onClick={() => setServicesOpen(prev => !prev)}
-              className="flex flex-row items-center justify-center gap-2.5 w-full px-4 py-2 text-white font-segoe font-normal rounded-lg"
+              className="flex flex-row items-center justify-center gap-2.5 w-full px-4 py-2 text-white font-segoe font-normal rounded-lg hover:text-brand-highlight transition"
             >
               Services
               <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${servicesOpen ? "rotate-180" : "rotate-0"}`} />

@@ -1,7 +1,6 @@
 "use client";
 
-import React from "react";
-import { Sparkles } from "./components/landingPage/Sparkles";
+import { Sparkles } from "./components/imported/Sparkles";
 
 export default function NotFound() {
     return (

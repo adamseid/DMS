@@ -1,21 +1,21 @@
 "use client";
 
-import { Sparkles } from "../components/landingPage/Sparkles";
-import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
-import { GridOverlay } from "../components/landingPage/GridOverlay";
-import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
-import { PurpleShadowOverlay } from "../components/landingPage/PurpleShadowOverlay";
+import { Sparkles } from "../components/imported/Sparkles";
+import { PurpleGradientButton } from "../components/imported/PurpleGradientButton";
+import { GridOverlay } from "../components/Overlay/GridOverlay";
+import { ShadowOverlay } from "../components/Overlay/ShadowOverlay";
+import { PurpleShadowOverlay } from "../components/Overlay/PurpleShadowOverlay";
 import Link from "next/link";
 
-export default function about() {
+export default function About() {
   return (
   <div className="bg-brand-dark">
     <div>
       {/* Hero */}
       <div className="relative">
         <img
-          src="/images/web-design-hero.png"
-          alt="Branding Hero Image"
+          src="/images/about-hero.png"
+          alt="About Hero"
           className="w-full md:h-[50vh] object-cover object-[center_20%] z-10 relative"
         />
         {/* Ellipse Shadow Overlay */}
@@ -129,8 +129,8 @@ export default function about() {
         <div className="relative flex flex-col items-stretch justify-start gap-8 md:flex-row md:items-center md:justify-between md:gap-20 bg-transparent z-10 pt-[40px] md:pt-[93px] pb-[80px] md:pb-[93px] max-w-[1440px] mx-auto md:px-10 px-3">
           <div className="w-full md:w-1/2">
             <img
-              src="/images/web-design-mission.png"
-              alt="Branding Hero Image"
+              src="/images/about-mission.png"
+              alt="Mission"
               className="w-full object-contain"
             />
           </div>
@@ -162,7 +162,7 @@ export default function about() {
       {/* Strategy */}
       <div className="relative">
         {/* Wrapper */}
-        <div className="relative bg-[url('/images/web-design-strategy.png')] md:bg-cover bg-contain bg-top md:bg-center bg-no-repeat z-10 pt-[150px] md:pt-[369px] md:pb-[93px] max-w-[1440px] mx-auto md:px-10 px-3">
+        <div className="relative bg-[url('/images/about-strategy.png')] md:bg-cover bg-contain bg-top md:bg-center bg-no-repeat z-10 pt-[150px] md:pt-[369px] md:pb-[93px] max-w-[1440px] mx-auto md:px-10 px-3">
           <h2 className="font-segoe font-normal md:text-[64px] text-[36px] md:leading-[70px] leading-[44px] tracking-[-2px] pb-4 text-left text-white md:pb-[78px] pb-[40px]">
             Built on Design, <br />
             Strategy, and Growth
@@ -172,7 +172,7 @@ export default function about() {
             <div className="w-full md:w-1/3 flex flex-col items-center px-[22px] py-[24px]">
               <img
                 src="/icons/strategic-development.svg"
-                alt="Branding Hero Image"
+                alt="Strategic Design"
                 className="w-full object-contain max-w-[30px] pb-4"
               />
 
@@ -190,7 +190,7 @@ export default function about() {
             <div className="w-full md:w-1/3 flex flex-col items-center px-[22px] py-[24px]">
               <img
                 src="/icons/scalable-development.svg"
-                alt="Branding Hero Image"
+                alt="Scalable Development"
                 className="w-full object-contain max-w-[30px] pb-4"
               />
 
@@ -208,7 +208,7 @@ export default function about() {
             <div className="w-full md:w-1/3 flex flex-col items-center px-[22px] py-[24px]">
               <img
                 src="/icons/visibility-performance.svg"
-                alt="Branding Hero Image"
+                alt="Visibility And Performance"
                 className="w-full object-contain max-w-[30px] pb-4"
               />
 

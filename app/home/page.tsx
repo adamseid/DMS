@@ -1,17 +1,16 @@
 "use client";
 
-import React from "react";
-import { ContainerScroll } from "../components/landingPage/ContainerScrollAnimation";
-import { SpotlightCard } from "../components/landingPage/SpotlightCard";
-import { InteractiveImageAccordion } from "../components/landingPage/InteractiveImageAccordion";
-import { Sparkles } from "../components/landingPage/Sparkles";
-import { Carousel } from "../components/landingPage/Carousel";
-import { VerticalTimeline } from "../components/landingPage/VerticalTimeline";
-import { ClientCard } from "../components/landingPage/ClientCard";
-import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
-import { GridOverlay } from "../components/landingPage/GridOverlay";
-import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
-import { VideoWithOverlay } from "../components/landingPage/VideoWithOverlay";
+import { ContainerScrollAnimation } from "../components/imported/ContainerScrollAnimation";
+import { SpotlightCard } from "../components/imported/SpotlightCard";
+import { InteractiveImageAccordion } from "../components/Accordion/InteractiveImageAccordion";
+import { Sparkles } from "../components/imported/Sparkles";
+import { Carousel } from "../components/Carousel/Carousel";
+import { VerticalTimeline } from "../components/imported/VerticalTimeline";
+import { ClientCard } from "../components/imported/ClientCard";
+import { PurpleGradientButton } from "../components/imported/PurpleGradientButton";
+import { GridOverlay } from "../components/Overlay/GridOverlay";
+import { ShadowOverlay } from "../components/Overlay/ShadowOverlay";
+import { VideoWithOverlay } from "../components/Overlay/VideoWithOverlay";
 import { carouselData, timelineData, accordionData } from "./pageData";
 import Link from "next/link";
 
@@ -48,7 +47,7 @@ export default function Home() {
 
             {/* Gradient Button */}
             <Link href="/website-development">
-              <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="Arrow Icon" text="Web Design" />
+              <PurpleGradientButton maxWidthClass="177px" imageSrc="/icons/north-east-arrow.svg" imageAlt="North East Arrow Icon" text="Web Design" />
             </Link>
 
             {/* Dark Button */}
@@ -74,9 +73,9 @@ export default function Home() {
           </div>
 
           {/* ContainerScroll */}
-          <ContainerScroll>
-            <VideoWithOverlay src="https://dms-home-video.s3.us-west-1.amazonaws.com/homepage_video.mp4" overlayImage="/images/play_button.png" />
-          </ContainerScroll>
+          <ContainerScrollAnimation>
+            <VideoWithOverlay src="https://dms-211972295614-us-west-1-an.s3.us-west-1.amazonaws.com/C4915_14.mp4" overlayImage="/images/play_button.png" />
+          </ContainerScrollAnimation>
         </div>
       </div>
 

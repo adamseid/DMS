@@ -1,10 +1,10 @@
 "use client";
 
 import React from "react";
-import { ContainerScroll } from "../components/landingPage/ContainerScrollAnimation";
-import { Sparkles } from "../components/landingPage/Sparkles";
-import { VideoWithOverlay } from "../components/landingPage/VideoWithOverlay";
-import { TestimonialCard } from "../components/landingPage/TestimonialCard";
+import { ContainerScrollAnimation } from "../components/imported/ContainerScrollAnimation";
+import { Sparkles } from "../components/imported/Sparkles";
+import { VideoWithOverlay } from "../components/Overlay/VideoWithOverlay";
+import { TestimonialCard } from "../components/imported/TestimonialCard";
 
 export default function ThankYou() {
   return (
@@ -37,9 +37,9 @@ export default function ThankYou() {
           </p>
 
           {/* ContainerScroll */}
-          <ContainerScroll>
-            <VideoWithOverlay src="https://dms-home-video.s3.us-west-1.amazonaws.com/homepage_video.mp4" overlayImage="/images/play_button.png" />
-          </ContainerScroll>
+          <ContainerScrollAnimation>
+            <VideoWithOverlay src="https://dms-211972295614-us-west-1-an.s3.us-west-1.amazonaws.com/C4915_14.mp4" overlayImage="/images/play_button.png" />
+          </ContainerScrollAnimation>
         </div>
       </div>
 

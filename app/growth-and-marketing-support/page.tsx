@@ -1,12 +1,10 @@
 "use client";
 
-import { Sparkles } from "../components/landingPage/Sparkles";
-import { PurpleGradientButton } from "../components/landingPage/PurpleGradientButton";
-import Accordion from "../components/landingPage/Accordion";
-import Testimonials from "../components/landingPage/Testimonials";
+import { Sparkles } from "../components/imported/Sparkles";
+import { PurpleGradientButton } from "../components/imported/PurpleGradientButton";
+import Accordion from "../components/Accordion/Accordion";
+import Testimonials from "../components/Carousel/Testimonials";
 import { faqs, testimonials } from "./pageData";
-import { GridOverlay } from "../components/landingPage/GridOverlay";
-import { ShadowOverlay } from "../components/landingPage/ShadowOverlay";
 import Link from "next/link";
 
 export default function GrowthAndMarketing() {
@@ -46,14 +44,14 @@ export default function GrowthAndMarketing() {
             {/* Desktop Image */}
             <img
               src="/images/growth-and-marketing-support.png"
-              alt="Branding Hero Image"
+              alt="Growth and Marketing Support"
               className="hidden md:block w-full object-contain"
             />
 
             {/* Mobile Image */}
             <img
               src="/images/growth-and-marketing-support-mobile.png"
-              alt="Branding Mobile Hero Image"
+              alt="Growth and Marketing Support Mobile"
               className="block md:hidden w-full object-contain"
             />
           </div>
@@ -61,7 +59,7 @@ export default function GrowthAndMarketing() {
       </div>
 
       {/* Contact */}
-      <div className="relative bg-[url('/images/contact-background.png')] bg-cover bg-center bg-no-repeat">
+      <div className="relative bg-[url('/images/contact-us-background.png')] bg-cover bg-center bg-no-repeat">
         <div className="relative flex flex-col items-center justify-start z-10 md:pt-[84px] pt-[40px] md:pb-[97px] pb-[40px] max-w-[1440px] mx-auto md:px-10 px-3">
           <h2 className="font-segoe font-normal text-[48px] md:text-[64px] leading-[52px] md:leading-[64px] tracking-[-1px] text-center md:text-left text-white align-middle pb-[32px]">
             Get in touch <br className="block md:hidden" /> with us
@@ -106,8 +104,8 @@ export default function GrowthAndMarketing() {
         {/* background image */}
         <div className="absolute top-0 left-0 w-full lg:top-1/2 lg:w-full lg:max-w-[70%] -translate-y-0 lg:-translate-y-1/2 z-1">
           <img
-            src="/images/service-hours.png"
-            alt="Website Development Hero Image"
+            src="/images/call-to-action.png"
+            alt="Call to Action"
             className="w-full object-contain"
           />
         </div>
